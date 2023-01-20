@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ABAD9850-F7A7-469F-9929-1725A2BA062A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>E_Apartments</RootNamespace>
+    <AssemblyName>E-Apartments</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IconLightBlue.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>packages\FluentValidation.11.4.0\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.2.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.2.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Caching.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Caching.Memory.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Binder.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.2.2.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.JsonWebTokens.5.6.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Logging.5.6.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Tokens.5.6.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.VisualStudio.Services.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.VisualStudio.Services.Client.16.170.0\lib\net462\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.VisualStudio.Services.Client.16.170.0\lib\net462\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.4.5.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.IdentityModel.Tokens.Jwt.5.6.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async, Version=3.2.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>packages\System.Interactive.Async.3.2.0\lib\net46\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\AppDbContext.cs" />
+    <Compile Include="Data\DBQueries.cs" />
+    <Compile Include="Data\Encrypt.cs" />
+    <Compile Include="Data\MailSender.cs" />
+    <Compile Include="Forms\Admin\FrmAddUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmAddUsers.Designer.cs">
+      <DependentUpon>FrmAddUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmApartmentManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmApartmentManage.Designer.cs">
+      <DependentUpon>FrmApartmentManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmBuildingManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmBuildingManage.Designer.cs">
+      <DependentUpon>FrmBuildingManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmClassManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmClassManage.Designer.cs">
+      <DependentUpon>FrmClassManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmExtendRequestManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmExtendRequestManage.Designer.cs">
+      <DependentUpon>FrmExtendRequestManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmManageAdditionalParkings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmManageAdditionalParkings.Designer.cs">
+      <DependentUpon>FrmManageAdditionalParkings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmManageReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmManageReservations.Designer.cs">
+      <DependentUpon>FrmManageReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmMarkReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmMarkReservations.Designer.cs">
+      <DependentUpon>FrmMarkReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmParkingManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmParkingManage.Designer.cs">
+      <DependentUpon>FrmParkingManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clerk\FrmCheckAvailability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clerk\FrmCheckAvailability.Designer.cs">
+      <DependentUpon>FrmCheckAvailability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clerk\FrmClassInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clerk\FrmClassInfo.Designer.cs">
+      <DependentUpon>FrmClassInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clerk\FrmMakeApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clerk\FrmMakeApplication.Designer.cs">
+      <DependentUpon>FrmMakeApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clerk\FrmMakeReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clerk\FrmMakeReservation.Designer.cs">
+      <DependentUpon>FrmMakeReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmCusApartmentManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmCusApartmentManager.Designer.cs">
+      <DependentUpon>FrmCusApartmentManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmCusDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmCusDashboard.Designer.cs">
+      <DependentUpon>FrmCusDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmCusMadeReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmCusMadeReservations.Designer.cs">
+      <DependentUpon>FrmCusMadeReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmCusOccupents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmCusOccupents.Designer.cs">
+      <DependentUpon>FrmCusOccupents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmExtendLeasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmExtendLeasing.Designer.cs">
+      <DependentUpon>FrmExtendLeasing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmFindApartments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmFindApartments.Designer.cs">
+      <DependentUpon>FrmFindApartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmAddCustomer.Designer.cs">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmMakeApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmMakeApplication.Designer.cs">
+      <DependentUpon>FrmMakeApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmMakeReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmMakeReservation.Designer.cs">
+      <DependentUpon>FrmMakeReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DELETE\FrmCreateLease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DELETE\FrmCreateLease.Designer.cs">
+      <DependentUpon>FrmCreateLease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmpGeneral\FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmpGeneral\FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmpGeneral\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmpGeneral\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmpGeneral\FrmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmpGeneral\FrmSplashScreen.Designer.cs">
+      <DependentUpon>FrmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmpGeneral\FrmWaitDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmpGeneral\FrmWaitDashboard.Designer.cs">
+      <DependentUpon>FrmWaitDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface1.cs" />
+    <Compile Include="Migrations\202301151732445_init.cs" />
+    <Compile Include="Migrations\202301151732445_init.designer.cs">
+      <DependentUpon>202301151732445_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301151736443_change.cs" />
+    <Compile Include="Migrations\202301151736443_change.designer.cs">
+      <DependentUpon>202301151736443_change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301151740099_add cusleasings.cs" />
+    <Compile Include="Migrations\202301151740099_add cusleasings.designer.cs">
+      <DependentUpon>202301151740099_add cusleasings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301151746011_add user keys.cs" />
+    <Compile Include="Migrations\202301151746011_add user keys.designer.cs">
+      <DependentUpon>202301151746011_add user keys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301151825218_change keys.cs" />
+    <Compile Include="Migrations\202301151825218_change keys.designer.cs">
+      <DependentUpon>202301151825218_change keys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301161414323_add additonal parking.cs" />
+    <Compile Include="Migrations\202301161414323_add additonal parking.designer.cs">
+      <DependentUpon>202301161414323_add additonal parking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301161419171_add additonal parking1.cs" />
+    <Compile Include="Migrations\202301161419171_add additonal parking1.designer.cs">
+      <DependentUpon>202301161419171_add additonal parking1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301161423506_add additonal parking2.cs" />
+    <Compile Include="Migrations\202301161423506_add additonal parking2.designer.cs">
+      <DependentUpon>202301161423506_add additonal parking2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301161427550_add additonal parking3.cs" />
+    <Compile Include="Migrations\202301161427550_add additonal parking3.designer.cs">
+      <DependentUpon>202301161427550_add additonal parking3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301161521532_add applicaiotn and reservation.cs" />
+    <Compile Include="Migrations\202301161521532_add applicaiotn and reservation.designer.cs">
+      <DependentUpon>202301161521532_add applicaiotn and reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301170733113_modify reservation.cs" />
+    <Compile Include="Migrations\202301170733113_modify reservation.designer.cs">
+      <DependentUpon>202301170733113_modify reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301171503479_extend req.cs" />
+    <Compile Include="Migrations\202301171503479_extend req.designer.cs">
+      <DependentUpon>202301171503479_extend req.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301171928490_extend req change.cs" />
+    <Compile Include="Migrations\202301171928490_extend req change.designer.cs">
+      <DependentUpon>202301171928490_extend req change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301181150510_check.cs" />
+    <Compile Include="Migrations\202301181150510_check.designer.cs">
+      <DependentUpon>202301181150510_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301191734113_users email.cs" />
+    <Compile Include="Migrations\202301191734113_users email.designer.cs">
+      <DependentUpon>202301191734113_users email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AdditionalParking.cs" />
+    <Compile Include="Models\Apartment.cs" />
+    <Compile Include="Models\AptApplication.cs" />
+    <Compile Include="Models\Building.cs" />
+    <Compile Include="Models\ApartmentsCount.cs" />
+    <Compile Include="Models\BorrowedParking.cs" />
+    <Compile Include="Models\CheifOccupent.cs" />
+    <Compile Include="Models\Class.cs" />
+    <Compile Include="Models\CustomerLeasings.cs" />
+    <Compile Include="Models\CustomerSave.cs" />
+    <Compile Include="Models\Dependent.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\LeaseExtendRequest.cs" />
+    <Compile Include="Models\Leasing.cs" />
+    <Compile Include="Models\Parking.cs" />
+    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validators\ApartmentValidator.cs" />
+    <Compile Include="Validators\BuildingValidator.cs" />
+    <Compile Include="Validators\ClassValidator.cs" />
+    <Compile Include="Validators\CustomerValidator.cs" />
+    <Compile Include="Validators\DependentValidator.cs" />
+    <Compile Include="Validators\UserValidator.cs" />
+    <EmbeddedResource Include="Forms\Admin\FrmAddUsers.resx">
+      <DependentUpon>FrmAddUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmApartmentManage.resx">
+      <DependentUpon>FrmApartmentManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmBuildingManage.resx">
+      <DependentUpon>FrmBuildingManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmClassManage.resx">
+      <DependentUpon>FrmClassManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmExtendRequestManage.resx">
+      <DependentUpon>FrmExtendRequestManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmManageAdditionalParkings.resx">
+      <DependentUpon>FrmManageAdditionalParkings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmManageReservations.resx">
+      <DependentUpon>FrmManageReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmMarkReservations.resx">
+      <DependentUpon>FrmMarkReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmParkingManage.resx">
+      <DependentUpon>FrmParkingManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clerk\FrmCheckAvailability.resx">
+      <DependentUpon>FrmCheckAvailability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clerk\FrmClassInfo.resx">
+      <DependentUpon>FrmClassInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clerk\FrmMakeApplication.resx">
+      <DependentUpon>FrmMakeApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clerk\FrmMakeReservation.resx">
+      <DependentUpon>FrmMakeReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CusForms\FrmCusApartmentManager.resx">
+      <DependentUpon>FrmCusApartmentManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CusForms\FrmCusDashboard.resx">
+      <DependentUpon>FrmCusDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CusForms\FrmCusMadeReservations.resx">
+      <DependentUpon>FrmCusMadeReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CusForms\FrmCusOccupents.resx">
+      <DependentUpon>FrmCusOccupents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CusForms\FrmExtendLeasing.resx">
+      <DependentUpon>FrmExtendLeasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CusForms\FrmFindApartments.resx">
+      <DependentUpon>FrmFindApartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CusForms\FrmAddCustomer.resx">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CusForms\FrmMakeApplication.resx">
+      <DependentUpon>FrmMakeApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CusForms\FrmMakeReservation.resx">
+      <DependentUpon>FrmMakeReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DELETE\FrmCreateLease.resx">
+      <DependentUpon>FrmCreateLease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmpGeneral\FrmDashboard.resx">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmpGeneral\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmpGeneral\FrmSplashScreen.resx">
+      <DependentUpon>FrmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmpGeneral\FrmWaitDashboard.resx">
+      <DependentUpon>FrmWaitDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301151732445_init.resx">
+      <DependentUpon>202301151732445_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301151736443_change.resx">
+      <DependentUpon>202301151736443_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301151740099_add cusleasings.resx">
+      <DependentUpon>202301151740099_add cusleasings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301151746011_add user keys.resx">
+      <DependentUpon>202301151746011_add user keys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301151825218_change keys.resx">
+      <DependentUpon>202301151825218_change keys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301161414323_add additonal parking.resx">
+      <DependentUpon>202301161414323_add additonal parking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301161419171_add additonal parking1.resx">
+      <DependentUpon>202301161419171_add additonal parking1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301161423506_add additonal parking2.resx">
+      <DependentUpon>202301161423506_add additonal parking2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301161427550_add additonal parking3.resx">
+      <DependentUpon>202301161427550_add additonal parking3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301161521532_add applicaiotn and reservation.resx">
+      <DependentUpon>202301161521532_add applicaiotn and reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301170733113_modify reservation.resx">
+      <DependentUpon>202301170733113_modify reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301171503479_extend req.resx">
+      <DependentUpon>202301171503479_extend req.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301171928490_extend req change.resx">
+      <DependentUpon>202301171928490_extend req change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301181150510_check.resx">
+      <DependentUpon>202301181150510_check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301191734113_users email.resx">
+      <DependentUpon>202301191734113_users email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagrams\Class.cd" />
+    <None Include="ClassDiagrams\ModelsClassDiagram.cd" />
+    <None Include="ClassDiagrams\FormsClassDiagram.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseIconBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IconLightBlue.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

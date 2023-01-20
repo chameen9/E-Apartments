@@ -1,0 +1,318 @@
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\E-Apartments.exe.config
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\E-Apartments.exe
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\E-Apartments.pdb
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\EntityFramework.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\EntityFramework.SqlServer.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\FluentValidation.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\FontAwesome.Sharp.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\itextsharp.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Configuration.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Options.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.TeamFoundation.Common.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.VisualStudio.Services.Common.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.VisualStudio.Services.WebApi.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Newtonsoft.Json.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Remotion.Linq.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Buffers.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Collections.Immutable.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Interactive.Async.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Memory.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Net.Http.Formatting.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Numerics.Vectors.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\EntityFramework.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\EntityFramework.SqlServer.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\FluentValidation.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\itextsharp.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Configuration.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Options.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.TeamFoundation.Common.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.VisualStudio.Services.Common.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Microsoft.VisualStudio.Services.WebApi.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Newtonsoft.Json.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\Remotion.Linq.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Buffers.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Collections.Immutable.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Interactive.Async.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Memory.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Net.Http.Formatting.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Numerics.Vectors.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\cs\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\de\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\es\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\fr\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\it\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\ja\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\ko\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\pl\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\pt-BR\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\ru\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\tr\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\zh-Hans\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\zh-Hant\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\cs\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\de\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\es\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\fr\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\it\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\ja\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\ko\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\pl\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\pt-BR\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\ru\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\tr\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\zh-Hans\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\zh-Hant\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\cs\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\de\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\es\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\fr\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\it\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\ja\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\ko\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\pl\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\pt-BR\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\ru\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\tr\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\zh-Hans\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\bin\Debug\zh-Hant\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E-Apartments.csproj.AssemblyReference.cache
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E-Apartments.csproj.SuggestedBindingRedirects.cache
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmApartmentManage.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmBuildingManage.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmClassManage.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmExtendRequestManage.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmManageAdditionalParkings.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmManageReservations.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmMarkReservations.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmParkingManage.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Clerk.FrmCheckAvailability.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Clerk.FrmClassInfo.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Clerk.FrmMakeApplication.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Clerk.FrmMakeReservation.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmCusApartmentManager.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Customer.FrmCusDashboard.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmCusMadeReservations.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmCusOccupents.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmExtendLeasing.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.Customer_Forms.FrmFindApartments.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.FrmAddCustomer.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmMakeApplication.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmMakeReservation.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.FrmCreateLease.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.FrmDashboard.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.FrmLogin.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.FrmSplashScreen.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Forms.FrmWaitDashboard.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.init.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.change.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.addcusleasings.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.adduserkeys.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.changekeys.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.addadditonalparking.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.addadditonalparking1.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.addadditonalparking2.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.addadditonalparking3.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.addapplicaiotnandreservation.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.modifyreservation.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.extendreq.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.extendreqchange.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Migrations.check.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E_Apartments.Properties.Resources.resources
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E-Apartments.csproj.GenerateResource.cache
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E-Apartments.csproj.CoreCompileInputs.cache
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E-Apartments.csproj.CopyComplete
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E-Apartments.exe
+D:\Beng (Hons)\AD\Software\New folder\E-Apartments\obj\Debug\E-Apartments.pdb
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\E-Apartments.exe.config
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\E-Apartments.exe
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\E-Apartments.pdb
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\EntityFramework.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\EntityFramework.SqlServer.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\FluentValidation.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\FontAwesome.Sharp.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\itextsharp.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Configuration.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Options.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.TeamFoundation.Common.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.VisualStudio.Services.Common.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.VisualStudio.Services.WebApi.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Newtonsoft.Json.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Remotion.Linq.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Buffers.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Collections.Immutable.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Interactive.Async.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Memory.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Net.Http.Formatting.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Numerics.Vectors.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\EntityFramework.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\EntityFramework.SqlServer.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\FluentValidation.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\itextsharp.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Configuration.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Options.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.TeamFoundation.Common.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.VisualStudio.Services.Common.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Microsoft.VisualStudio.Services.WebApi.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Newtonsoft.Json.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\Remotion.Linq.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Buffers.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Collections.Immutable.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Interactive.Async.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Memory.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Net.Http.Formatting.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Numerics.Vectors.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\cs\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\de\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\es\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\fr\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\it\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\ja\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\ko\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\pl\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\pt-BR\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\ru\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\tr\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\zh-Hans\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\zh-Hant\Microsoft.TeamFoundation.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\cs\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\de\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\es\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\fr\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\it\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\ja\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\ko\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\pl\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\pt-BR\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\ru\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\tr\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\zh-Hans\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\zh-Hant\Microsoft.VisualStudio.Services.Common.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\cs\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\de\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\es\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\fr\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\it\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\ja\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\ko\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\pl\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\pt-BR\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\ru\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\tr\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\zh-Hans\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\zh-Hant\Microsoft.VisualStudio.Services.WebApi.resources.dll
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.csproj.AssemblyReference.cache
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.csproj.SuggestedBindingRedirects.cache
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmApartmentManage.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmBuildingManage.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmClassManage.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmExtendRequestManage.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmManageAdditionalParkings.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmManageReservations.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmMarkReservations.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmParkingManage.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Clerk.FrmCheckAvailability.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Clerk.FrmClassInfo.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Clerk.FrmMakeApplication.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Clerk.FrmMakeReservation.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmCusApartmentManager.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Customer.FrmCusDashboard.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmCusMadeReservations.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmCusOccupents.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmExtendLeasing.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Customer_Forms.FrmFindApartments.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.FrmAddCustomer.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmMakeApplication.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmMakeReservation.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.FrmCreateLease.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.FrmDashboard.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.FrmLogin.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.FrmSplashScreen.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.FrmWaitDashboard.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.init.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.change.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.addcusleasings.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.adduserkeys.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.changekeys.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.addadditonalparking.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.addadditonalparking1.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.addadditonalparking2.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.addadditonalparking3.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.addapplicaiotnandreservation.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.modifyreservation.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.extendreq.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.extendreqchange.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.check.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Properties.Resources.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.csproj.GenerateResource.cache
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.csproj.CoreCompileInputs.cache
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.csproj.CopyComplete
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.exe
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.pdb
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmAddUsers.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.usersemail.resources
