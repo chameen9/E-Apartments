@@ -37,11 +37,15 @@
             this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.cmbApartmentID = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblClassName = new System.Windows.Forms.Label();
+            this.lblBuildingName = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.cmbClassId = new System.Windows.Forms.ComboBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.cmbParkingId = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.cmbBuildingId = new System.Windows.Forms.ComboBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.cmbFloorNumber = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
@@ -51,10 +55,6 @@
             this.txtApartmentId = new System.Windows.Forms.TextBox();
             this.btnSearch = new FontAwesome.Sharp.IconPictureBox();
             this.btnClose = new FontAwesome.Sharp.IconPictureBox();
-            this.cmbClassId = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblBuildingName = new System.Windows.Forms.Label();
-            this.lblClassName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGridApartments)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
@@ -167,6 +167,72 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Apartment Details";
             // 
+            // lblClassName
+            // 
+            this.lblClassName.AutoSize = true;
+            this.lblClassName.Location = new System.Drawing.Point(151, 200);
+            this.lblClassName.Name = "lblClassName";
+            this.lblClassName.Size = new System.Drawing.Size(59, 25);
+            this.lblClassName.TabIndex = 109;
+            this.lblClassName.Text = "Name";
+            // 
+            // lblBuildingName
+            // 
+            this.lblBuildingName.AutoSize = true;
+            this.lblBuildingName.Location = new System.Drawing.Point(151, 120);
+            this.lblBuildingName.Name = "lblBuildingName";
+            this.lblBuildingName.Size = new System.Drawing.Size(59, 25);
+            this.lblBuildingName.TabIndex = 108;
+            this.lblBuildingName.Text = "Name";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Location = new System.Drawing.Point(724, 222);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(150, 39);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Visible = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // cmbClassId
+            // 
+            this.cmbClassId.FormattingEnabled = true;
+            this.cmbClassId.IntegralHeight = false;
+            this.cmbClassId.Location = new System.Drawing.Point(20, 228);
+            this.cmbClassId.MaxDropDownItems = 10;
+            this.cmbClassId.Name = "cmbClassId";
+            this.cmbClassId.Size = new System.Drawing.Size(383, 33);
+            this.cmbClassId.TabIndex = 107;
+            this.cmbClassId.SelectedIndexChanged += new System.EventHandler(this.cmbClassId_SelectedIndexChanged);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Location = new System.Drawing.Point(532, 222);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(150, 39);
+            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Visible = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 200);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 25);
+            this.label2.TabIndex = 106;
+            this.label2.Text = "Class ID";
+            // 
             // cmbParkingId
             // 
             this.cmbParkingId.FormattingEnabled = true;
@@ -188,20 +254,6 @@
             this.label3.Text = "Parking ID";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(724, 222);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(150, 39);
-            this.btnDelete.TabIndex = 10;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Visible = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // cmbBuildingId
             // 
             this.cmbBuildingId.FormattingEnabled = true;
@@ -212,20 +264,6 @@
             this.cmbBuildingId.Size = new System.Drawing.Size(383, 33);
             this.cmbBuildingId.TabIndex = 103;
             this.cmbBuildingId.SelectedIndexChanged += new System.EventHandler(this.cmbBuildingId_SelectedIndexChanged);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Location = new System.Drawing.Point(532, 222);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(150, 39);
-            this.btnUpdate.TabIndex = 9;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Visible = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // cmbFloorNumber
             // 
@@ -326,44 +364,6 @@
             this.btnClose.Visible = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // cmbClassId
-            // 
-            this.cmbClassId.FormattingEnabled = true;
-            this.cmbClassId.IntegralHeight = false;
-            this.cmbClassId.Location = new System.Drawing.Point(20, 228);
-            this.cmbClassId.MaxDropDownItems = 10;
-            this.cmbClassId.Name = "cmbClassId";
-            this.cmbClassId.Size = new System.Drawing.Size(383, 33);
-            this.cmbClassId.TabIndex = 107;
-            this.cmbClassId.SelectedIndexChanged += new System.EventHandler(this.cmbClassId_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 200);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 25);
-            this.label2.TabIndex = 106;
-            this.label2.Text = "Class ID";
-            // 
-            // lblBuildingName
-            // 
-            this.lblBuildingName.AutoSize = true;
-            this.lblBuildingName.Location = new System.Drawing.Point(151, 120);
-            this.lblBuildingName.Name = "lblBuildingName";
-            this.lblBuildingName.Size = new System.Drawing.Size(59, 25);
-            this.lblBuildingName.TabIndex = 108;
-            this.lblBuildingName.Text = "Name";
-            // 
-            // lblClassName
-            // 
-            this.lblClassName.AutoSize = true;
-            this.lblClassName.Location = new System.Drawing.Point(151, 200);
-            this.lblClassName.Name = "lblClassName";
-            this.lblClassName.Size = new System.Drawing.Size(59, 25);
-            this.lblClassName.TabIndex = 109;
-            this.lblClassName.Text = "Name";
-            // 
             // FrmApartmentManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -379,7 +379,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmApartmentManage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmApartmentManage";
+            this.Text = "Manage Apartments";
             this.Load += new System.EventHandler(this.FrmApartmentManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGridApartments)).EndInit();
             this.groupBox1.ResumeLayout(false);

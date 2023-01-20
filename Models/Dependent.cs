@@ -21,11 +21,6 @@ namespace E_Apartments.Models
 
         //Foreign key
         public Guid? CustomerId { get; set; }
-        public virtual CustomerSave CustomerSave
-        { get
-            {
-                throw new System.NotImplementedException();
-            }
-            set { } }
+        
     }
 }

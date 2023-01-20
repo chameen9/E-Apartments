@@ -1,5 +1,6 @@
 ﻿using E_Apartments.Forms.Admin;
 using E_Apartments.Forms.Clerk;
+using E_Apartments.Forms.EmpGeneral;
 using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,9 @@ namespace E_Apartments.Forms
         public FrmDashboard()
         {
             InitializeComponent();
+
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(btnLogout, "Click to Logout");
         }
 
         // for panel to act as the ribbon
@@ -30,7 +34,7 @@ namespace E_Apartments.Forms
 
         private void FrmDashboard_Load(object sender, EventArgs e)
         {
-            lblUsertype.Text = FrmLogin.userType;
+            
             lbluserName.Text = FrmLogin.userName;
 
             pnlMain.Controls.Clear();
@@ -54,6 +58,7 @@ namespace E_Apartments.Forms
                 btnNavExtendRequests.Visible = false;
                 btnNavAddParkings.Visible = false;
                 btnNavAddUsers.Visible = false;
+                btnNavManageApplications.Visible = false;
             }
             
             else if(FrmLogin.userType == "Admin")
@@ -69,6 +74,7 @@ namespace E_Apartments.Forms
                 btnNavManageReservations.Visible = true;
                 btnNavExtendRequests.Visible = true;
                 btnNavAddParkings.Visible = true;
+                btnNavManageApplications.Visible = true;
 
                 btnNavAddUsers.Visible = false;
             }
@@ -85,6 +91,7 @@ namespace E_Apartments.Forms
                 btnNavManageReservations.Visible = true;
                 btnNavExtendRequests.Visible = true;
                 btnNavAddParkings.Visible = true;
+                btnNavManageApplications.Visible = true;
 
                 btnNavAddUsers.Visible = true;
             }
@@ -101,6 +108,7 @@ namespace E_Apartments.Forms
                 btnNavExtendRequests.Visible = false;
                 btnNavAddParkings.Visible = false;
                 btnNavAddUsers.Visible = false;
+                btnNavManageApplications.Visible = false;
             }
         }
         private void ChangeButtonProperties(IconButton clickedButton)
@@ -116,7 +124,8 @@ namespace E_Apartments.Forms
                 btnNavManageParkings,
                 btnNavExtendRequests,
                 btnNavAddParkings,
-                btnNavAddUsers
+                btnNavAddUsers,
+                btnNavManageApplications
             };
 
             foreach (IconButton button in allButtons)
@@ -134,6 +143,8 @@ namespace E_Apartments.Forms
                     button.IconColor = Color.White;
                 }
             }
+            lbluserName.ForeColor = Color.White;
+            picUser.IconColor = Color.SteelBlue;
         }
         private void ResetButtonProperties()
         {
@@ -148,7 +159,8 @@ namespace E_Apartments.Forms
                 btnNavManageParkings,
                 btnNavExtendRequests,
                 btnNavAddParkings,
-                btnNavAddUsers
+                btnNavAddUsers,
+                btnNavManageApplications
             };
 
             foreach (IconButton button in allButtons)
@@ -157,6 +169,7 @@ namespace E_Apartments.Forms
                 button.ForeColor = Color.White;
                 button.IconColor = Color.White;
             }
+            
         }
 
         private void pnlRibbon_MouseDown(object sender, MouseEventArgs e)
@@ -224,6 +237,8 @@ namespace E_Apartments.Forms
             frmWaitDashboard.Show();
 
             ResetButtonProperties();
+            lbluserName.ForeColor = Color.White;
+            picUser.IconColor = Color.SteelBlue;
         }
 
         private void btnNavCheckAvailability_Click(object sender, EventArgs e)
@@ -366,6 +381,41 @@ namespace E_Apartments.Forms
             pnlMain.Controls.Add(frmAddUsers);
             frmAddUsers.Dock = DockStyle.Fill;
             frmAddUsers.Show();
+        }
+
+        private void lbluserName_Click(object sender, EventArgs e)
+        {
+            lbluserName.ForeColor = Color.FromArgb(0, 143, 251);
+            picUser.IconColor = Color.FromArgb(0, 143, 251);
+
+            ResetButtonProperties();
+
+            pnlMain.Controls.Clear();
+
+            lblFormTopic.Text = "Profile";
+            iconTitle.IconChar = FontAwesome.Sharp.IconChar.User;
+            pnlMain.Controls.Clear();
+
+            FrmUserProfile frmUserProfile = new FrmUserProfile();
+            frmUserProfile.TopLevel = false;
+            pnlMain.Controls.Add(frmUserProfile);
+            frmUserProfile.Dock = DockStyle.Fill;
+            frmUserProfile.Show();
+        }
+
+        private void btnNavManageApplications_Click(object sender, EventArgs e)
+        {
+            ChangeButtonProperties(btnNavManageApplications);
+
+            lblFormTopic.Text = "Manage Applications";
+            iconTitle.IconChar = FontAwesome.Sharp.IconChar.Paperclip;
+            pnlMain.Controls.Clear();
+
+            FrmManageApplications frmManageApplications = new FrmManageApplications();
+            frmManageApplications.TopLevel = false;
+            pnlMain.Controls.Add(frmManageApplications);
+            frmManageApplications.Dock = DockStyle.Fill;
+            frmManageApplications.Show();
         }
     }
 }

@@ -112,7 +112,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmCusMadeReservations";
-            this.Text = "FrmCusMadeReservations";
+            this.Text = "Made Reservations";
             this.Load += new System.EventHandler(this.FrmCusMadeReservations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGridReservations)).EndInit();
             this.ResumeLayout(false);

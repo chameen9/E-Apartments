@@ -349,7 +349,7 @@ namespace E_Apartments.Forms
                     {
                         _appDbContext = new AppDbContext();
                         Dependent dependentSave = new Dependent();
-                        dependentSave.DependentId = DependentId;
+                        dependentSave.DependentId = DependentId = Guid.NewGuid();
                         dependentSave.DependentName = "No_Dependent";
                         dependentSave.Relationship = "No_Relation";
                         dependentSave.Age = 0;

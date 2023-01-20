@@ -21,5 +21,6 @@ namespace E_Apartments.Models
 
         //set relation
         public ICollection<Apartment> Apartment { get; set; }
+        public ICollection<AptApplication> AptApplication { get; set; }
     }
 }

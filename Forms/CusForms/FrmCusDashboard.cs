@@ -37,7 +37,8 @@ namespace E_Apartments.Forms.Customer
                 btnNavFindApartments,
                 btnNavExtendLease,
                 btnCusReservations,
-                btnNavOccupents
+                btnNavOccupents,
+                btnNavApplications
             };
 
             foreach (IconButton button in allButtons)
@@ -62,7 +63,8 @@ namespace E_Apartments.Forms.Customer
                 btnNavFindApartments,
                 btnNavExtendLease,
                 btnCusReservations,
-                btnNavOccupents
+                btnNavOccupents,
+                btnNavApplications
             };
 
             foreach (IconButton button in allButtons)
@@ -73,9 +75,11 @@ namespace E_Apartments.Forms.Customer
             }
         }
         public static Guid cusIdforReservation;
+        public static Guid cusIdApplication;
         public static Guid LeaseId;
         public static DateTime LeaseEndDate;
         public static Guid CustomerId;
+        public static bool enableLeaseExtendBtn;
         private void FrmCusDashboard_Load(object sender, EventArgs e)
         {
             _appDbContext = new AppDbContext();
@@ -102,8 +106,20 @@ namespace E_Apartments.Forms.Customer
                         btnCusReservations.Visible = false;
                     }
 
-                    //_appDbContext= new AppDbContext();
-                    //var existingLeasings = _appDbContext.Leasings
+                    _appDbContext = new AppDbContext();
+                    var existingApplication = _appDbContext.AptApplication.FirstOrDefault(r => r.CustomerId == customer.CustomerId && r.Status == "Pending");
+                    if (existingApplication != null)
+                    {
+                        btnNavApplications.Visible = true;
+                        btnNavFindApartments.Visible = false;
+                        cusIdApplication = existingApplication.CustomerId;
+                    }
+                    else
+                    {
+                        btnNavApplications.Visible = false;
+                        btnNavFindApartments.Visible = true;
+                    }
+
                 }
                 else
                 {
@@ -114,6 +130,7 @@ namespace E_Apartments.Forms.Customer
             {
                 //
             }
+
             string cusEmail = FrmLogin.userEmail.ToString(); 
             _appDbContext = new AppDbContext();
             var foundCustomer = _appDbContext.CustomerSaves.FirstOrDefault(x=>x.CustomerEmail == cusEmail);
@@ -144,15 +161,18 @@ namespace E_Apartments.Forms.Customer
                 var thisLeasing = _appDbContext.Leasings.FirstOrDefault(x => x.LeasingId == LeaseId);
                 LeaseEndDate = thisLeasing.EndDate;
 
-                if (LeaseEndDate <= DateTime.Now.AddMonths(2))
+                if (LeaseEndDate <= DateTime.Now.AddMonths(2))      // find the leasing
                 {
                     btnNavExtendLease.Visible = true;
+                    enableLeaseExtendBtn = true;
                 }
                 else
                 {
-                    btnNavExtendLease.Visible = false;
+                    btnNavExtendLease.Visible = true;
+                    enableLeaseExtendBtn = false;
                 }
             }
+
             pnlMain.Controls.Clear();
 
             FrmWaitDashboard frmWaitDashboard = new FrmWaitDashboard();
@@ -261,6 +281,21 @@ namespace E_Apartments.Forms.Customer
             pnlMain.Controls.Add(frmCusOccupents);
             frmCusOccupents.Dock = DockStyle.Fill;
             frmCusOccupents.Show();
+        }
+
+        private void btnNavApplications_Click(object sender, EventArgs e)
+        {
+            ChangeButtonProperties(btnNavApplications);
+
+            lblFormTopic.Text = "Applications";
+            iconTitle.IconChar = FontAwesome.Sharp.IconChar.Paperclip;
+            pnlMain.Controls.Clear();
+
+            FrmCusApplications frmCusApplications = new FrmCusApplications();
+            frmCusApplications.TopLevel = false;
+            pnlMain.Controls.Add(frmCusApplications);
+            frmCusApplications.Dock = DockStyle.Fill;
+            frmCusApplications.Show();
         }
     }
 }

@@ -455,7 +455,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmClassManage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmClassManage";
+            this.Text = "Manage Classes";
             this.Load += new System.EventHandler(this.FrmClassManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmbCommonRoomsCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmbServentBathroomCount)).EndInit();

@@ -32,19 +32,19 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblApartmentID = new System.Windows.Forms.Label();
             this.lblCusId = new System.Windows.Forms.Label();
+            this.icoInfo = new FontAwesome.Sharp.IconPictureBox();
             this.lblAddParkings = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpRequireTo = new System.Windows.Forms.DateTimePicker();
             this.dtpRequireFrom = new System.Windows.Forms.DateTimePicker();
+            this.btnCancel = new FontAwesome.Sharp.IconButton();
+            this.btnConfirm = new FontAwesome.Sharp.IconButton();
             this.lblInstallment = new System.Windows.Forms.Label();
             this.lblRF = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.icoInfo = new FontAwesome.Sharp.IconPictureBox();
-            this.btnCancel = new FontAwesome.Sharp.IconButton();
-            this.btnConfirm = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icoInfo)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +86,7 @@
             this.lblApartmentID.Size = new System.Drawing.Size(58, 25);
             this.lblApartmentID.TabIndex = 146;
             this.lblApartmentID.Text = "Ap ID";
+            this.lblApartmentID.Visible = false;
             // 
             // lblCusId
             // 
@@ -97,6 +98,22 @@
             this.lblCusId.Size = new System.Drawing.Size(46, 25);
             this.lblCusId.TabIndex = 145;
             this.lblCusId.Text = "C ID";
+            this.lblCusId.Visible = false;
+            // 
+            // icoInfo
+            // 
+            this.icoInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
+            this.icoInfo.Cursor = System.Windows.Forms.Cursors.Help;
+            this.icoInfo.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.icoInfo.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
+            this.icoInfo.IconColor = System.Drawing.Color.RoyalBlue;
+            this.icoInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icoInfo.IconSize = 25;
+            this.icoInfo.Location = new System.Drawing.Point(417, 168);
+            this.icoInfo.Name = "icoInfo";
+            this.icoInfo.Size = new System.Drawing.Size(25, 25);
+            this.icoInfo.TabIndex = 144;
+            this.icoInfo.TabStop = false;
             // 
             // lblAddParkings
             // 
@@ -133,6 +150,42 @@
             this.dtpRequireFrom.Name = "dtpRequireFrom";
             this.dtpRequireFrom.Size = new System.Drawing.Size(335, 31);
             this.dtpRequireFrom.TabIndex = 140;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnCancel.IconColor = System.Drawing.Color.White;
+            this.btnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancel.IconSize = 25;
+            this.btnCancel.Location = new System.Drawing.Point(37, 298);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(335, 38);
+            this.btnCancel.TabIndex = 138;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
+            this.btnConfirm.FlatAppearance.BorderSize = 0;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.btnConfirm.IconColor = System.Drawing.Color.White;
+            this.btnConfirm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConfirm.IconSize = 25;
+            this.btnConfirm.Location = new System.Drawing.Point(447, 298);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
+            this.btnConfirm.Size = new System.Drawing.Size(335, 38);
+            this.btnConfirm.TabIndex = 137;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // lblInstallment
             // 
@@ -194,57 +247,6 @@
             this.label1.Size = new System.Drawing.Size(94, 25);
             this.label1.TabIndex = 112;
             this.label1.Text = "Your Email";
-            // 
-            // icoInfo
-            // 
-            this.icoInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
-            this.icoInfo.Cursor = System.Windows.Forms.Cursors.Help;
-            this.icoInfo.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.icoInfo.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
-            this.icoInfo.IconColor = System.Drawing.Color.RoyalBlue;
-            this.icoInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icoInfo.IconSize = 25;
-            this.icoInfo.Location = new System.Drawing.Point(417, 168);
-            this.icoInfo.Name = "icoInfo";
-            this.icoInfo.Size = new System.Drawing.Size(25, 25);
-            this.icoInfo.TabIndex = 144;
-            this.icoInfo.TabStop = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnCancel.IconColor = System.Drawing.Color.White;
-            this.btnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancel.IconSize = 25;
-            this.btnCancel.Location = new System.Drawing.Point(37, 298);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(335, 38);
-            this.btnCancel.TabIndex = 138;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
-            this.btnConfirm.FlatAppearance.BorderSize = 0;
-            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirm.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            this.btnConfirm.IconColor = System.Drawing.Color.White;
-            this.btnConfirm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConfirm.IconSize = 25;
-            this.btnConfirm.Location = new System.Drawing.Point(447, 298);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Padding = new System.Windows.Forms.Padding(70, 0, 0, 0);
-            this.btnConfirm.Size = new System.Drawing.Size(335, 38);
-            this.btnConfirm.TabIndex = 137;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // FrmMakeApplication
             // 

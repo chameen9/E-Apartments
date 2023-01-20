@@ -88,7 +88,7 @@ namespace E_Apartments.Forms.Admin
             }
             else
             {
-                MessageBox.Show("No Reservations Found.","",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("No Reservations Found.", "Information", MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 
@@ -116,6 +116,9 @@ namespace E_Apartments.Forms.Admin
                         }
                         counter++;
                     }
+                    // Create a font object for the header texts
+                    iTextSharp.text.Font fontHeader = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, iTextSharp.text.Font.BOLD);
+
                     // document formats
                     Document pdfDoc = new Document(PageSize.A4.Rotate(), 10f, 10f, 10f, 0f);
                     PdfWriter.GetInstance(pdfDoc, new FileStream(path, FileMode.Create));
@@ -124,7 +127,7 @@ namespace E_Apartments.Forms.Admin
                     pdfDoc.Open();
 
                     // Add the title to the document
-                    Paragraph title = new Paragraph("Reservations");
+                    Paragraph title = new Paragraph("Reservations",fontHeader);
                     title.Alignment = Element.ALIGN_CENTER;
                     pdfDoc.Add(title);
 
@@ -139,7 +142,7 @@ namespace E_Apartments.Forms.Admin
 
                     for (int i = 0; i < DGridReservations.Columns.Count; i++)
                     {
-                        pdfTable.AddCell(new Phrase(DGridReservations.Columns[i].HeaderText));
+                        pdfTable.AddCell(new Phrase(DGridReservations.Columns[i].HeaderText,fontHeader));
                     }
 
                     for (int i = 0; i < DGridReservations.Rows.Count; i++)

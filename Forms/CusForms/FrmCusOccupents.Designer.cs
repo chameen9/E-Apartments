@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCusOccupents));
             this.grpCusDetails = new System.Windows.Forms.GroupBox();
+            this.txtNic = new System.Windows.Forms.TextBox();
             this.icoHidePw = new FontAwesome.Sharp.IconPictureBox();
             this.icoShowPw = new FontAwesome.Sharp.IconPictureBox();
             this.btnUpdate = new FontAwesome.Sharp.IconButton();
@@ -50,7 +51,6 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtCusName = new System.Windows.Forms.TextBox();
             this.DGridDependents = new System.Windows.Forms.DataGridView();
-            this.txtNic = new System.Windows.Forms.TextBox();
             this.grpCusDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icoHidePw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icoShowPw)).BeginInit();
@@ -85,6 +85,17 @@
             this.grpCusDetails.TabIndex = 1;
             this.grpCusDetails.TabStop = false;
             this.grpCusDetails.Text = "Customer\'s Details";
+            // 
+            // txtNic
+            // 
+            this.txtNic.Enabled = false;
+            this.txtNic.Location = new System.Drawing.Point(77, 134);
+            this.txtNic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNic.Name = "txtNic";
+            this.txtNic.ReadOnly = true;
+            this.txtNic.Size = new System.Drawing.Size(327, 31);
+            this.txtNic.TabIndex = 114;
+            this.txtNic.Visible = false;
             // 
             // icoHidePw
             // 
@@ -299,17 +310,6 @@
             this.DGridDependents.Size = new System.Drawing.Size(911, 217);
             this.DGridDependents.TabIndex = 16;
             // 
-            // txtNic
-            // 
-            this.txtNic.Enabled = false;
-            this.txtNic.Location = new System.Drawing.Point(77, 134);
-            this.txtNic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNic.Name = "txtNic";
-            this.txtNic.ReadOnly = true;
-            this.txtNic.Size = new System.Drawing.Size(327, 31);
-            this.txtNic.TabIndex = 114;
-            this.txtNic.Visible = false;
-            // 
             // FrmCusOccupents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -325,7 +325,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmCusOccupents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCusOccupents";
+            this.Text = "Occupant Details";
             this.Load += new System.EventHandler(this.FrmCusOccupents_Load);
             this.grpCusDetails.ResumeLayout(false);
             this.grpCusDetails.PerformLayout();

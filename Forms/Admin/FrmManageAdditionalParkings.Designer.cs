@@ -35,6 +35,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManageAdditionalParkings));
             this.DGridParkings = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nmbParkingId = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbFilterStatus = new System.Windows.Forms.ComboBox();
             this.cmbFilterBuilding = new System.Windows.Forms.ComboBox();
@@ -43,7 +44,6 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.nmbParkingId = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.DGridParkings)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmbParkingId)).BeginInit();
@@ -117,6 +117,18 @@
             this.groupBox1.TabIndex = 103;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Additional Parkings";
+            // 
+            // nmbParkingId
+            // 
+            this.nmbParkingId.Location = new System.Drawing.Point(20, 69);
+            this.nmbParkingId.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nmbParkingId.Name = "nmbParkingId";
+            this.nmbParkingId.Size = new System.Drawing.Size(383, 31);
+            this.nmbParkingId.TabIndex = 107;
             // 
             // label3
             // 
@@ -203,18 +215,6 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Parking ID";
             // 
-            // nmbParkingId
-            // 
-            this.nmbParkingId.Location = new System.Drawing.Point(20, 69);
-            this.nmbParkingId.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nmbParkingId.Name = "nmbParkingId";
-            this.nmbParkingId.Size = new System.Drawing.Size(383, 31);
-            this.nmbParkingId.TabIndex = 107;
-            // 
             // FrmManageAdditionalParkings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -230,7 +230,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmManageAdditionalParkings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmManageAdditionalParkings";
+            this.Text = "Manage Additional Parkings";
             this.Load += new System.EventHandler(this.FrmManageAdditionalParkings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGridParkings)).EndInit();
             this.groupBox1.ResumeLayout(false);

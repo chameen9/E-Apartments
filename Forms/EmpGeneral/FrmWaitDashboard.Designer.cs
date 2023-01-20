@@ -83,7 +83,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmWaitDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmWaitDashboard";
+            this.Text = "Wait Dashboard";
             this.Load += new System.EventHandler(this.FrmWaitDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconTime)).EndInit();
             this.panel1.ResumeLayout(false);

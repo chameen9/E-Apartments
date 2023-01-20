@@ -1,4 +1,6 @@
-﻿using System;
+﻿using E_Apartments.Data;
+using E_Apartments.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +22,7 @@ namespace E_Apartments.Forms.CusForms
             // Set the tooltip text
             tooltip.SetToolTip(icoInfo, "This Additional Parking Fee " + Environment.NewLine + "will be added to the total Payble.");
         }
+        AppDbContext _appDbContext;
 
         private void FrmMakeApplication_Load(object sender, EventArgs e)
         {
@@ -39,7 +42,84 @@ namespace E_Apartments.Forms.CusForms
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            if(dtpRequireFrom.Value >= DateTime.Today)
+            {
+                if(dtpRequireFrom.Value.Date == dtpRequireTo.Value.Date)
+                {
+                    MessageBox.Show("Required From Date and Required To Dates are Equal.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (dtpRequireTo.Value < DateTime.Today)
+                {
+                    MessageBox.Show("Required To Date should not in Past.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    _appDbContext = new AppDbContext();
+                    Guid CusId = Guid.Parse(FrmCusApartmentManager.CustomerID);
+                    string ApartmentId = Convert.ToString(FrmCusApartmentManager.ApartmentID);
+                    var existingApplication = _appDbContext.AptApplication.Where(x=>x.CustomerId == CusId && x.ApartmentId == ApartmentId && x.Status == "Pending").FirstOrDefault();
+                    
+                    if(existingApplication != null)
+                    {
+                        MessageBox.Show("You Already made a Application on this Apartment.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        if (FrmCusApartmentManager.AdditionalParkingState)
+                        {
+                            int addPkId = (int)FrmCusApartmentManager.AdditionalParkingId;
+                            try
+                            {
+                                _appDbContext = new AppDbContext();
+                                var aptApplication = new AptApplication();
+                                aptApplication.AppID = Guid.NewGuid();
+                                aptApplication.Status = "Pending";
+                                aptApplication.CustomerId = CusId;
+                                aptApplication.ApartmentId = ApartmentId;
+                                aptApplication.CreatedAt = DateTime.Now;
+                                aptApplication.ResrvedFrom = dtpRequireFrom.Value;
+                                aptApplication.ResrvedTo = dtpRequireTo.Value;
+                                aptApplication.AddParkingId = addPkId;
 
+                                _appDbContext.AptApplication.Add(aptApplication);
+                                _appDbContext.SaveChanges();
+                                MessageBox.Show("Application on this Apartment sent successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            try
+                            {
+                                _appDbContext = new AppDbContext();
+                                var aptApplication = new AptApplication();
+                                aptApplication.AppID = Guid.NewGuid();
+                                aptApplication.Status = "Pendig";
+                                aptApplication.CustomerId = CusId;
+                                aptApplication.ApartmentId = ApartmentId;
+                                aptApplication.CreatedAt = DateTime.Now;
+                                aptApplication.ResrvedFrom = dtpRequireFrom.Value;
+                                aptApplication.ResrvedTo = dtpRequireTo.Value;
+
+                                _appDbContext.AptApplication.Add(aptApplication);
+                                _appDbContext.SaveChanges();
+                                MessageBox.Show("Application on this Apartment sent successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Required From Date should not in Past.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

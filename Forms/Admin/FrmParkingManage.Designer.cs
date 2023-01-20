@@ -307,7 +307,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmParkingManage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmParkingManage";
+            this.Text = "Manage Parking";
             this.Load += new System.EventHandler(this.FrmParkingManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGridParkings)).EndInit();
             this.groupBox1.ResumeLayout(false);

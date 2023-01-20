@@ -32,30 +32,31 @@
             this.pnlMain = new System.Windows.Forms.Panel();
             this.lblFormTopic = new System.Windows.Forms.Label();
             this.pnlFormHeader = new System.Windows.Forms.Panel();
+            this.iconTitle = new FontAwesome.Sharp.IconPictureBox();
             this.pnlRibbon = new System.Windows.Forms.Panel();
+            this.btnMinimize = new FontAwesome.Sharp.IconPictureBox();
+            this.btnExit = new FontAwesome.Sharp.IconPictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlNavBar = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.iconTitle = new FontAwesome.Sharp.IconPictureBox();
-            this.btnMinimize = new FontAwesome.Sharp.IconPictureBox();
-            this.btnExit = new FontAwesome.Sharp.IconPictureBox();
+            this.btnNavApplications = new FontAwesome.Sharp.IconButton();
             this.btnNavOccupents = new FontAwesome.Sharp.IconButton();
             this.btnCusReservations = new FontAwesome.Sharp.IconButton();
             this.btnNavExtendLease = new FontAwesome.Sharp.IconButton();
             this.btnNavFindApartments = new FontAwesome.Sharp.IconButton();
+            this.pnlNavBar = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.picUser = new FontAwesome.Sharp.IconPictureBox();
             this.btnLogout = new FontAwesome.Sharp.IconPictureBox();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlFormHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconTitle)).BeginInit();
             this.pnlRibbon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnlNavBar.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconTitle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -89,74 +90,6 @@
             this.pnlFormHeader.Size = new System.Drawing.Size(1030, 40);
             this.pnlFormHeader.TabIndex = 210;
             // 
-            // pnlRibbon
-            // 
-            this.pnlRibbon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(71)))));
-            this.pnlRibbon.Controls.Add(this.btnMinimize);
-            this.pnlRibbon.Controls.Add(this.btnExit);
-            this.pnlRibbon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlRibbon.Location = new System.Drawing.Point(250, 0);
-            this.pnlRibbon.Name = "pnlRibbon";
-            this.pnlRibbon.Size = new System.Drawing.Size(1030, 25);
-            this.pnlRibbon.TabIndex = 209;
-            this.pnlRibbon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlRibbon_MouseDown);
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblName.Location = new System.Drawing.Point(44, 120);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(59, 25);
-            this.lblName.TabIndex = 204;
-            this.lblName.Text = "Name";
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(250, 14);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnNavOccupents);
-            this.panel2.Controls.Add(this.btnCusReservations);
-            this.panel2.Controls.Add(this.btnNavExtendLease);
-            this.panel2.Controls.Add(this.btnNavFindApartments);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 208);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 512);
-            this.panel2.TabIndex = 207;
-            // 
-            // pnlNavBar
-            // 
-            this.pnlNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(71)))));
-            this.pnlNavBar.Controls.Add(this.panel2);
-            this.pnlNavBar.Controls.Add(this.panel1);
-            this.pnlNavBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlNavBar.Location = new System.Drawing.Point(0, 0);
-            this.pnlNavBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pnlNavBar.Name = "pnlNavBar";
-            this.pnlNavBar.Size = new System.Drawing.Size(250, 720);
-            this.pnlNavBar.TabIndex = 208;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.picUser);
-            this.panel1.Controls.Add(this.btnLogout);
-            this.panel1.Controls.Add(this.picLogo);
-            this.panel1.Controls.Add(this.lblName);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 208);
-            this.panel1.TabIndex = 206;
-            // 
             // iconTitle
             // 
             this.iconTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
@@ -170,6 +103,18 @@
             this.iconTitle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconTitle.TabIndex = 2;
             this.iconTitle.TabStop = false;
+            // 
+            // pnlRibbon
+            // 
+            this.pnlRibbon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(71)))));
+            this.pnlRibbon.Controls.Add(this.btnMinimize);
+            this.pnlRibbon.Controls.Add(this.btnExit);
+            this.pnlRibbon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlRibbon.Location = new System.Drawing.Point(250, 0);
+            this.pnlRibbon.Name = "pnlRibbon";
+            this.pnlRibbon.Size = new System.Drawing.Size(1030, 25);
+            this.pnlRibbon.TabIndex = 209;
+            this.pnlRibbon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlRibbon_MouseDown);
             // 
             // btnMinimize
             // 
@@ -202,6 +147,63 @@
             this.btnExit.TabIndex = 0;
             this.btnExit.TabStop = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblName.Location = new System.Drawing.Point(44, 120);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(59, 25);
+            this.lblName.TabIndex = 204;
+            this.lblName.Text = "Name";
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(250, 14);
+            this.panel3.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnNavApplications);
+            this.panel2.Controls.Add(this.btnNavOccupents);
+            this.panel2.Controls.Add(this.btnCusReservations);
+            this.panel2.Controls.Add(this.btnNavExtendLease);
+            this.panel2.Controls.Add(this.btnNavFindApartments);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 208);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(250, 512);
+            this.panel2.TabIndex = 207;
+            // 
+            // btnNavApplications
+            // 
+            this.btnNavApplications.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(71)))));
+            this.btnNavApplications.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNavApplications.FlatAppearance.BorderSize = 0;
+            this.btnNavApplications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNavApplications.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnNavApplications.IconChar = FontAwesome.Sharp.IconChar.Paperclip;
+            this.btnNavApplications.IconColor = System.Drawing.SystemColors.Window;
+            this.btnNavApplications.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNavApplications.IconSize = 30;
+            this.btnNavApplications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNavApplications.Location = new System.Drawing.Point(0, 194);
+            this.btnNavApplications.Name = "btnNavApplications";
+            this.btnNavApplications.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnNavApplications.Size = new System.Drawing.Size(250, 45);
+            this.btnNavApplications.TabIndex = 3;
+            this.btnNavApplications.TabStop = false;
+            this.btnNavApplications.Text = "Applications";
+            this.btnNavApplications.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNavApplications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNavApplications.UseVisualStyleBackColor = false;
+            this.btnNavApplications.Click += new System.EventHandler(this.btnNavApplications_Click);
             // 
             // btnNavOccupents
             // 
@@ -300,6 +302,30 @@
             this.btnNavFindApartments.UseVisualStyleBackColor = false;
             this.btnNavFindApartments.Click += new System.EventHandler(this.btnNavFindApartments_Click);
             // 
+            // pnlNavBar
+            // 
+            this.pnlNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(71)))));
+            this.pnlNavBar.Controls.Add(this.panel2);
+            this.pnlNavBar.Controls.Add(this.panel1);
+            this.pnlNavBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlNavBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlNavBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlNavBar.Name = "pnlNavBar";
+            this.pnlNavBar.Size = new System.Drawing.Size(250, 720);
+            this.pnlNavBar.TabIndex = 208;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.picUser);
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.picLogo);
+            this.panel1.Controls.Add(this.lblName);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 208);
+            this.panel1.TabIndex = 206;
+            // 
             // picUser
             // 
             this.picUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(71)))));
@@ -359,17 +385,17 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmCusDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCusDashboard";
+            this.Text = "Customer Dashboard";
             this.Load += new System.EventHandler(this.FrmCusDashboard_Load);
             this.pnlFormHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconTitle)).EndInit();
             this.pnlRibbon.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.panel2.ResumeLayout(false);
             this.pnlNavBar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconTitle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
@@ -398,5 +424,6 @@
         private FontAwesome.Sharp.IconPictureBox btnLogout;
         private FontAwesome.Sharp.IconButton btnCusReservations;
         private FontAwesome.Sharp.IconButton btnNavOccupents;
+        private FontAwesome.Sharp.IconButton btnNavApplications;
     }
 }

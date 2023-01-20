@@ -52,6 +52,7 @@
             this.cmbDepRelation = new System.Windows.Forms.ComboBox();
             this.btnSkip = new System.Windows.Forms.Button();
             this.DGridDependents = new System.Windows.Forms.DataGridView();
+            this.btnDepAdd = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.nmbDepAge = new System.Windows.Forms.NumericUpDown();
             this.btnFinish = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtDepName = new System.Windows.Forms.TextBox();
-            this.btnDepAdd = new System.Windows.Forms.Button();
             this.btnExit = new FontAwesome.Sharp.IconPictureBox();
             this.grpCusDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmbCusAge)).BeginInit();
@@ -335,6 +335,23 @@
             this.DGridDependents.Size = new System.Drawing.Size(383, 217);
             this.DGridDependents.TabIndex = 15;
             // 
+            // btnDepAdd
+            // 
+            this.btnDepAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnDepAdd.BackgroundImage = global::E_Apartments.Properties.Resources.AddIcon;
+            this.btnDepAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDepAdd.Enabled = false;
+            this.btnDepAdd.FlatAppearance.BorderSize = 0;
+            this.btnDepAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
+            this.btnDepAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
+            this.btnDepAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDepAdd.Location = new System.Drawing.Point(373, 182);
+            this.btnDepAdd.Name = "btnDepAdd";
+            this.btnDepAdd.Size = new System.Drawing.Size(31, 31);
+            this.btnDepAdd.TabIndex = 14;
+            this.btnDepAdd.UseVisualStyleBackColor = false;
+            this.btnDepAdd.Click += new System.EventHandler(this.btnDepAdd_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -414,23 +431,6 @@
             this.txtDepName.Size = new System.Drawing.Size(383, 31);
             this.txtDepName.TabIndex = 0;
             // 
-            // btnDepAdd
-            // 
-            this.btnDepAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnDepAdd.BackgroundImage = global::E_Apartments.Properties.Resources.AddIcon;
-            this.btnDepAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDepAdd.Enabled = false;
-            this.btnDepAdd.FlatAppearance.BorderSize = 0;
-            this.btnDepAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
-            this.btnDepAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
-            this.btnDepAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDepAdd.Location = new System.Drawing.Point(373, 182);
-            this.btnDepAdd.Name = "btnDepAdd";
-            this.btnDepAdd.Size = new System.Drawing.Size(31, 31);
-            this.btnDepAdd.TabIndex = 14;
-            this.btnDepAdd.UseVisualStyleBackColor = false;
-            this.btnDepAdd.Click += new System.EventHandler(this.btnDepAdd_Click);
-            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(71)))));
@@ -461,7 +461,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmAddCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAddCustomer";
+            this.Text = "Register Customer";
             this.Load += new System.EventHandler(this.FrmAddCustomer_Load);
             this.grpCusDetails.ResumeLayout(false);
             this.grpCusDetails.PerformLayout();

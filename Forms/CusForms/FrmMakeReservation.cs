@@ -140,8 +140,8 @@ namespace E_Apartments.Forms.CusForms
                 {
                     calonly();
                     _appDbContext = new AppDbContext();
-                    Guid cccc = Guid.Parse(FrmCusApartmentManager.CustomerID);
-                    var existingreservation = _appDbContext.Reservation.Where(x => x.CustomerId == cccc && x.ApartmentId == txtAparmtmentId.Text && x.Status == "Pending").FirstOrDefault();
+                    Guid cusId = Guid.Parse(FrmCusApartmentManager.CustomerID);
+                    var existingreservation = _appDbContext.Reservation.Where(x => x.CustomerId == cusId && x.ApartmentId == txtAparmtmentId.Text && x.Status == "Pending").FirstOrDefault();
                     if(existingreservation != null)
                     {
                         MessageBox.Show("You Already made a Reservation on this Apartment.","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);

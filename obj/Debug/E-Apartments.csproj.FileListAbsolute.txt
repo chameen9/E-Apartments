@@ -268,6 +268,7 @@ D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\zh-Hans\Microsoft.VisualStudio
 D:\Beng (Hons)\AD\Software\E-Apartments\bin\Debug\zh-Hant\Microsoft.VisualStudio.Services.WebApi.resources.dll
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.csproj.AssemblyReference.cache
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.csproj.SuggestedBindingRedirects.cache
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmAddUsers.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmApartmentManage.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmBuildingManage.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmClassManage.resources
@@ -293,6 +294,7 @@ D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.FrmCreateLe
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.FrmDashboard.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.FrmLogin.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.FrmSplashScreen.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.EmpGeneral.FrmUserProfile.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.FrmWaitDashboard.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.init.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.change.resources
@@ -308,11 +310,15 @@ D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.modify
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.extendreq.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.extendreqchange.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.check.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.usersemail.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.addadpIdtoapplication.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Properties.Resources.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.csproj.GenerateResource.cache
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.csproj.CoreCompileInputs.cache
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.csproj.CopyComplete
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.exe
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E-Apartments.pdb
-D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmAddUsers.resources
-D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.usersemail.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.addadpIdtoapplication2.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmCusApplications.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmManageApplications.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmMarkApplications.resources

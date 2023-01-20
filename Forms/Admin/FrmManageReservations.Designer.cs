@@ -135,7 +135,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmManageReservations";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmManageReservations";
+            this.Text = "Manage Reservations";
             this.Load += new System.EventHandler(this.FrmManageReservations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGridReservations)).EndInit();
             this.ResumeLayout(false);

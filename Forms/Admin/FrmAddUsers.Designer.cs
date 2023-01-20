@@ -34,6 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGridUsers = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnSearch = new FontAwesome.Sharp.IconPictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.cmbUserType = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,14 +47,11 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.icoInfo = new FontAwesome.Sharp.IconPictureBox();
-            this.btnSearch = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGridUsers)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icoInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // DGridUsers
@@ -107,6 +109,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCancel);
+            this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtEmail);
@@ -125,6 +129,64 @@
             this.groupBox1.TabIndex = 105;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add an User";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Location = new System.Drawing.Point(532, 140);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(150, 39);
+            this.btnCancel.TabIndex = 114;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Location = new System.Drawing.Point(724, 142);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(150, 39);
+            this.btnUpdate.TabIndex = 113;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Visible = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
+            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnSearch.IconColor = System.Drawing.Color.White;
+            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSearch.IconSize = 31;
+            this.btnSearch.Location = new System.Drawing.Point(843, 68);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(31, 31);
+            this.btnSearch.TabIndex = 112;
+            this.btnSearch.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(288, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 25);
+            this.label4.TabIndex = 111;
+            this.label4.Text = "User Type";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(20, 148);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(425, 31);
+            this.txtEmail.TabIndex = 2;
             // 
             // txtUsername
             // 
@@ -216,22 +278,6 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Username";
             // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(20, 148);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(425, 31);
-            this.txtEmail.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(288, 40);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 25);
-            this.label4.TabIndex = 111;
-            this.label4.Text = "User Type";
-            // 
             // icoInfo
             // 
             this.icoInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
@@ -248,19 +294,6 @@
             this.icoInfo.TabIndex = 204;
             this.icoInfo.TabStop = false;
             // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
-            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnSearch.IconColor = System.Drawing.Color.White;
-            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSearch.IconSize = 31;
-            this.btnSearch.Location = new System.Drawing.Point(843, 68);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(31, 31);
-            this.btnSearch.TabIndex = 112;
-            this.btnSearch.TabStop = false;
-            // 
             // FrmAddUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -276,13 +309,13 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmAddUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAddUsers";
+            this.Text = "Add Users";
             this.Load += new System.EventHandler(this.FrmAddUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGridUsers)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icoInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoInfo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -303,5 +336,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private FontAwesome.Sharp.IconPictureBox btnSearch;
         private FontAwesome.Sharp.IconPictureBox icoInfo;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

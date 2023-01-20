@@ -285,7 +285,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmCheckAvailability";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCheckAvailability";
+            this.Text = "Check Availability";
             this.Load += new System.EventHandler(this.FrmCheckAvailability_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGridApartments)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -25,6 +25,7 @@ namespace E_Apartments.Data
         public DbSet<AdditionalParking> AdditionalParkings { get; set; }
         public DbSet<Reservation> Reservation { get; set; }
         public DbSet<LeaseExtendRequest> LeaseExtendRequest { get; set; }
+        public DbSet<AptApplication> AptApplication { get; set; }
     }
 
 }

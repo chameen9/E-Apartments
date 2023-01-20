@@ -50,22 +50,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.nmbAdditionalPrikingsCount = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.nmbFloorCount = new System.Windows.Forms.NumericUpDown();
             this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.DGridBuildings = new System.Windows.Forms.DataGridView();
             this.btnSearch = new FontAwesome.Sharp.IconPictureBox();
             this.btnClose = new FontAwesome.Sharp.IconPictureBox();
-            this.nmbFloorCount = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
+            this.DGridBuildings = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.nmbApartmentsCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmbNormalParkingsCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmbAdditionalPrikingsCount)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGridBuildings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmbFloorCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmbFloorCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGridBuildings)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuildingName
@@ -270,6 +270,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Building Details";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(297, 196);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(106, 25);
+            this.label7.TabIndex = 102;
+            this.label7.Text = "Floor Count";
+            // 
+            // nmbFloorCount
+            // 
+            this.nmbFloorCount.Location = new System.Drawing.Point(302, 226);
+            this.nmbFloorCount.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nmbFloorCount.Name = "nmbFloorCount";
+            this.nmbFloorCount.Size = new System.Drawing.Size(101, 31);
+            this.nmbFloorCount.TabIndex = 101;
+            this.nmbFloorCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txtSearchBox
             // 
             this.txtSearchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
@@ -301,6 +323,35 @@
             this.label6.Size = new System.Drawing.Size(145, 25);
             this.label6.TabIndex = 52;
             this.label6.Text = "Parkings Count : ";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
+            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnSearch.IconColor = System.Drawing.Color.White;
+            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSearch.IconSize = 31;
+            this.btnSearch.Location = new System.Drawing.Point(372, 70);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(31, 31);
+            this.btnSearch.TabIndex = 37;
+            this.btnSearch.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Multiply;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 31;
+            this.btnClose.Location = new System.Drawing.Point(372, 70);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(31, 31);
+            this.btnClose.TabIndex = 38;
+            this.btnClose.TabStop = false;
+            this.btnClose.Visible = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // DGridBuildings
             // 
@@ -353,57 +404,6 @@
             this.DGridBuildings.TabIndex = 100;
             this.DGridBuildings.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGridBuildings_CellContentClick);
             // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
-            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnSearch.IconColor = System.Drawing.Color.White;
-            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSearch.IconSize = 31;
-            this.btnSearch.Location = new System.Drawing.Point(372, 70);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(31, 31);
-            this.btnSearch.TabIndex = 37;
-            this.btnSearch.TabStop = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Multiply;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 31;
-            this.btnClose.Location = new System.Drawing.Point(372, 70);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(31, 31);
-            this.btnClose.TabIndex = 38;
-            this.btnClose.TabStop = false;
-            this.btnClose.Visible = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // nmbFloorCount
-            // 
-            this.nmbFloorCount.Location = new System.Drawing.Point(302, 226);
-            this.nmbFloorCount.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.nmbFloorCount.Name = "nmbFloorCount";
-            this.nmbFloorCount.Size = new System.Drawing.Size(101, 31);
-            this.nmbFloorCount.TabIndex = 101;
-            this.nmbFloorCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(297, 196);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 25);
-            this.label7.TabIndex = 102;
-            this.label7.Text = "Floor Count";
-            // 
             // FrmBuildingManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -419,17 +419,17 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmBuildingManage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmBuildingManage";
+            this.Text = "Manage Buildings";
             this.Load += new System.EventHandler(this.FrmBuildingManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmbApartmentsCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmbNormalParkingsCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmbAdditionalPrikingsCount)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGridBuildings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmbFloorCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmbFloorCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGridBuildings)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -339,7 +339,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmClassInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmClassInfo";
+            this.Text = "Class Info";
             this.Load += new System.EventHandler(this.FrmClassInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmbCommonBathroomsCount)).EndInit();

@@ -74,7 +74,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmSplashScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmSplashScreen";
+            this.Text = "Splash Screen";
             this.ResumeLayout(false);
             this.PerformLayout();
 

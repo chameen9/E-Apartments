@@ -203,11 +203,23 @@
     <Compile Include="Forms\Admin\FrmManageAdditionalParkings.Designer.cs">
       <DependentUpon>FrmManageAdditionalParkings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Admin\FrmManageApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmManageApplications.Designer.cs">
+      <DependentUpon>FrmManageApplications.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\FrmManageReservations.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Admin\FrmManageReservations.Designer.cs">
       <DependentUpon>FrmManageReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmMarkApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmMarkApplications.Designer.cs">
+      <DependentUpon>FrmMarkApplications.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\FrmMarkReservations.cs">
       <SubType>Form</SubType>
@@ -250,6 +262,12 @@
     </Compile>
     <Compile Include="Forms\CusForms\FrmCusApartmentManager.Designer.cs">
       <DependentUpon>FrmCusApartmentManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmCusApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CusForms\FrmCusApplications.Designer.cs">
+      <DependentUpon>FrmCusApplications.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CusForms\FrmCusDashboard.cs">
       <SubType>Form</SubType>
@@ -323,6 +341,12 @@
     <Compile Include="Forms\EmpGeneral\FrmSplashScreen.Designer.cs">
       <DependentUpon>FrmSplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EmpGeneral\FrmUserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmpGeneral\FrmUserProfile.Designer.cs">
+      <DependentUpon>FrmUserProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EmpGeneral\FrmWaitDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -390,6 +414,14 @@
     <Compile Include="Migrations\202301191734113_users email.designer.cs">
       <DependentUpon>202301191734113_users email.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301201349198_add adpId to application.cs" />
+    <Compile Include="Migrations\202301201349198_add adpId to application.designer.cs">
+      <DependentUpon>202301201349198_add adpId to application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301201400002_add adpId to application2.cs" />
+    <Compile Include="Migrations\202301201400002_add adpId to application2.designer.cs">
+      <DependentUpon>202301201400002_add adpId to application2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdditionalParking.cs" />
     <Compile Include="Models\Apartment.cs" />
@@ -434,8 +466,14 @@
     <EmbeddedResource Include="Forms\Admin\FrmManageAdditionalParkings.resx">
       <DependentUpon>FrmManageAdditionalParkings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmManageApplications.resx">
+      <DependentUpon>FrmManageApplications.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\FrmManageReservations.resx">
       <DependentUpon>FrmManageReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmMarkApplications.resx">
+      <DependentUpon>FrmMarkApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\FrmMarkReservations.resx">
       <DependentUpon>FrmMarkReservations.cs</DependentUpon>
@@ -457,6 +495,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CusForms\FrmCusApartmentManager.resx">
       <DependentUpon>FrmCusApartmentManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CusForms\FrmCusApplications.resx">
+      <DependentUpon>FrmCusApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CusForms\FrmCusDashboard.resx">
       <DependentUpon>FrmCusDashboard.cs</DependentUpon>
@@ -493,6 +534,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmpGeneral\FrmSplashScreen.resx">
       <DependentUpon>FrmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmpGeneral\FrmUserProfile.resx">
+      <DependentUpon>FrmUserProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmpGeneral\FrmWaitDashboard.resx">
       <DependentUpon>FrmWaitDashboard.cs</DependentUpon>
@@ -541,6 +585,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301191734113_users email.resx">
       <DependentUpon>202301191734113_users email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301201349198_add adpId to application.resx">
+      <DependentUpon>202301201349198_add adpId to application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301201400002_add adpId to application2.resx">
+      <DependentUpon>202301201400002_add adpId to application2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

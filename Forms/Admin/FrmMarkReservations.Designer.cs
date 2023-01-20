@@ -30,6 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMarkReservations));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblCurrentDue = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblPaid = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtReservationFee = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtpStart = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtClassId = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtApartmentId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCusId = new System.Windows.Forms.Label();
@@ -37,23 +54,6 @@
             this.btnLaese = new FontAwesome.Sharp.IconButton();
             this.txtCusName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtClassId = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtpStart = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtReservationFee = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblCurrentDue = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblPaid = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +94,174 @@
             this.groupBox1.Size = new System.Drawing.Size(814, 456);
             this.groupBox1.TabIndex = 106;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Application Details";
+            this.groupBox1.Text = "Reservation Details";
+            // 
+            // lblCurrentDue
+            // 
+            this.lblCurrentDue.AutoSize = true;
+            this.lblCurrentDue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentDue.Location = new System.Drawing.Point(606, 314);
+            this.lblCurrentDue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCurrentDue.Name = "lblCurrentDue";
+            this.lblCurrentDue.Size = new System.Drawing.Size(77, 28);
+            this.lblCurrentDue.TabIndex = 159;
+            this.lblCurrentDue.Text = "Current";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(579, 314);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(36, 28);
+            this.label12.TabIndex = 165;
+            this.label12.Text = "Rs.";
+            // 
+            // lblPaid
+            // 
+            this.lblPaid.AutoSize = true;
+            this.lblPaid.Location = new System.Drawing.Point(606, 272);
+            this.lblPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPaid.Name = "lblPaid";
+            this.lblPaid.Size = new System.Drawing.Size(45, 25);
+            this.lblPaid.TabIndex = 162;
+            this.lblPaid.Text = "Paid";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(578, 272);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(35, 25);
+            this.label11.TabIndex = 164;
+            this.label11.Text = "Rs.";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(606, 235);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(49, 25);
+            this.lblTotal.TabIndex = 160;
+            this.lblTotal.Text = "Total";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(579, 235);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 25);
+            this.label9.TabIndex = 163;
+            this.label9.Text = "Rs.";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(440, 272);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 25);
+            this.label10.TabIndex = 161;
+            this.label10.Text = "Paid  : ";
+            // 
+            // txtReservationFee
+            // 
+            this.txtReservationFee.Location = new System.Drawing.Point(35, 311);
+            this.txtReservationFee.Name = "txtReservationFee";
+            this.txtReservationFee.ReadOnly = true;
+            this.txtReservationFee.Size = new System.Drawing.Size(335, 31);
+            this.txtReservationFee.TabIndex = 157;
+            this.txtReservationFee.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(30, 283);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(135, 25);
+            this.label8.TabIndex = 158;
+            this.label8.Text = "Reservation Fee";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(440, 235);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 25);
+            this.label7.TabIndex = 156;
+            this.label7.Text = "Total : ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(439, 314);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 28);
+            this.label6.TabIndex = 155;
+            this.label6.Text = "Current Due : ";
+            // 
+            // dtpEnd
+            // 
+            this.dtpEnd.Enabled = false;
+            this.dtpEnd.Location = new System.Drawing.Point(445, 153);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.Size = new System.Drawing.Size(335, 31);
+            this.dtpEnd.TabIndex = 154;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(440, 125);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 25);
+            this.label5.TabIndex = 153;
+            this.label5.Text = "End Date";
+            // 
+            // dtpStart
+            // 
+            this.dtpStart.Enabled = false;
+            this.dtpStart.Location = new System.Drawing.Point(37, 153);
+            this.dtpStart.Name = "dtpStart";
+            this.dtpStart.Size = new System.Drawing.Size(335, 31);
+            this.dtpStart.TabIndex = 152;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(32, 125);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 25);
+            this.label4.TabIndex = 151;
+            this.label4.Text = "Start Date";
+            // 
+            // txtClassId
+            // 
+            this.txtClassId.Location = new System.Drawing.Point(37, 232);
+            this.txtClassId.Name = "txtClassId";
+            this.txtClassId.ReadOnly = true;
+            this.txtClassId.Size = new System.Drawing.Size(335, 31);
+            this.txtClassId.TabIndex = 149;
+            this.txtClassId.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(32, 204);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 25);
+            this.label3.TabIndex = 150;
+            this.label3.Text = "Class ID";
             // 
             // txtApartmentId
             // 
@@ -183,173 +350,6 @@
             this.label1.Size = new System.Drawing.Size(141, 25);
             this.label1.TabIndex = 112;
             this.label1.Text = "Customer Name";
-            // 
-            // txtClassId
-            // 
-            this.txtClassId.Location = new System.Drawing.Point(37, 232);
-            this.txtClassId.Name = "txtClassId";
-            this.txtClassId.ReadOnly = true;
-            this.txtClassId.Size = new System.Drawing.Size(335, 31);
-            this.txtClassId.TabIndex = 149;
-            this.txtClassId.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 204);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 25);
-            this.label3.TabIndex = 150;
-            this.label3.Text = "Class ID";
-            // 
-            // dtpStart
-            // 
-            this.dtpStart.Enabled = false;
-            this.dtpStart.Location = new System.Drawing.Point(37, 153);
-            this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(335, 31);
-            this.dtpStart.TabIndex = 152;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 125);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 25);
-            this.label4.TabIndex = 151;
-            this.label4.Text = "Start Date";
-            // 
-            // dtpEnd
-            // 
-            this.dtpEnd.Enabled = false;
-            this.dtpEnd.Location = new System.Drawing.Point(445, 153);
-            this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(335, 31);
-            this.dtpEnd.TabIndex = 154;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(440, 125);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 25);
-            this.label5.TabIndex = 153;
-            this.label5.Text = "End Date";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(439, 314);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 28);
-            this.label6.TabIndex = 155;
-            this.label6.Text = "Current Due : ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(440, 235);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 25);
-            this.label7.TabIndex = 156;
-            this.label7.Text = "Total : ";
-            // 
-            // txtReservationFee
-            // 
-            this.txtReservationFee.Location = new System.Drawing.Point(35, 311);
-            this.txtReservationFee.Name = "txtReservationFee";
-            this.txtReservationFee.ReadOnly = true;
-            this.txtReservationFee.Size = new System.Drawing.Size(335, 31);
-            this.txtReservationFee.TabIndex = 157;
-            this.txtReservationFee.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 283);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(135, 25);
-            this.label8.TabIndex = 158;
-            this.label8.Text = "Reservation Fee";
-            // 
-            // lblCurrentDue
-            // 
-            this.lblCurrentDue.AutoSize = true;
-            this.lblCurrentDue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentDue.Location = new System.Drawing.Point(606, 314);
-            this.lblCurrentDue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCurrentDue.Name = "lblCurrentDue";
-            this.lblCurrentDue.Size = new System.Drawing.Size(77, 28);
-            this.lblCurrentDue.TabIndex = 159;
-            this.lblCurrentDue.Text = "Current";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(606, 235);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(49, 25);
-            this.lblTotal.TabIndex = 160;
-            this.lblTotal.Text = "Total";
-            // 
-            // lblPaid
-            // 
-            this.lblPaid.AutoSize = true;
-            this.lblPaid.Location = new System.Drawing.Point(606, 272);
-            this.lblPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPaid.Name = "lblPaid";
-            this.lblPaid.Size = new System.Drawing.Size(45, 25);
-            this.lblPaid.TabIndex = 162;
-            this.lblPaid.Text = "Paid";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(440, 272);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 25);
-            this.label10.TabIndex = 161;
-            this.label10.Text = "Paid  : ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(579, 235);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 25);
-            this.label9.TabIndex = 163;
-            this.label9.Text = "Rs.";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(578, 272);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 25);
-            this.label11.TabIndex = 164;
-            this.label11.Text = "Rs.";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(579, 314);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(36, 28);
-            this.label12.TabIndex = 165;
-            this.label12.Text = "Rs.";
             // 
             // FrmMarkReservations
             // 

@@ -87,6 +87,7 @@ namespace E_Apartments
                                 if (FoundCustomerWithLeaseId != null)
                                 {
                                     leasingId = FoundCustomerWithLeaseId.LeasingId.ToString();
+                                    
                                 }
                                 else
                                 {

@@ -1,10 +1,13 @@
 ﻿using E_Apartments.Data;
 using E_Apartments.Models;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -158,6 +161,88 @@ namespace E_Apartments.Forms.Admin
                 }
             }
             
+        }
+
+        private void btnExportPdf_Click(object sender, EventArgs e)
+        {
+            if (DGridReqests.Rows.Count > 0)
+            {
+                try
+                {
+                    // set the pdf name and path
+                    string path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads\\ExtendRequests.pdf";
+
+                    // chck existing files in the directory
+                    if (!Directory.Exists(Path.GetDirectoryName(path)))
+                        Directory.CreateDirectory(Path.GetDirectoryName(path));
+
+                    int counter = 1;
+                    while (File.Exists(path))
+                    {
+                        string newPath = Path.Combine(Path.GetDirectoryName(path), Path.GetFileNameWithoutExtension(path) + "(" + counter + ")" + Path.GetExtension(path));
+                        if (!File.Exists(newPath))
+                        {
+                            path = newPath;
+                            break;
+                        }
+                        counter++;
+                    }
+                    // Create a font object for the header texts
+                    iTextSharp.text.Font fontHeader = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, iTextSharp.text.Font.BOLD);
+
+                    // document formats
+                    Document pdfDoc = new Document(PageSize.A4.Rotate(), 10f, 10f, 10f, 0f);
+                    PdfWriter.GetInstance(pdfDoc, new FileStream(path, FileMode.Create));
+
+                    //Pdf data
+                    pdfDoc.Open();
+
+                    // Add the title to the document
+                    Paragraph title = new Paragraph("Extend Requests", fontHeader);
+                    title.Alignment = Element.ALIGN_CENTER;
+                    pdfDoc.Add(title);
+
+                    //add an page break
+                    pdfDoc.Add(Chunk.NEWLINE);
+
+                    // convert data grid to a table
+                    PdfPTable pdfTable = new PdfPTable(DGridReqests.Columns.Count);
+                    pdfTable.DefaultCell.Padding = 3;
+                    pdfTable.WidthPercentage = 100;
+                    pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                    for (int i = 0; i < DGridReqests.Columns.Count; i++)
+                    {
+                        pdfTable.AddCell(new Phrase(DGridReqests.Columns[i].HeaderText, fontHeader));
+                    }
+
+                    for (int i = 0; i < DGridReqests.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < DGridReqests.Columns.Count; j++)
+                        {
+                            pdfTable.AddCell(new Phrase(DGridReqests.Rows[i].Cells[j].Value.ToString()));
+                        }
+                    }
+
+                    pdfDoc.Add(pdfTable);
+                    pdfDoc.Close();
+                    //close pdf data
+
+                    MessageBox.Show("PDF export successfully. The file is located at :" + Environment.NewLine + path, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (IOException ioEx)
+                {
+                    MessageBox.Show(ioEx.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Cannot export a report without data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

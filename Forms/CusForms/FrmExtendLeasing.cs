@@ -46,6 +46,15 @@ namespace E_Apartments.Forms.CusForms
                     var thisClass = _appDbContext.Classes.Where(x => x.ClassId == thisLeasing.ClassID.ToString()).FirstOrDefault();
                     txtReservationFee.Text = thisClass.NonRefundableReservationAmount.ToString();
                     lblClassName.Text = thisClass.ClassName.ToString();
+
+                    if (FrmCusDashboard.enableLeaseExtendBtn)
+                    {
+                        btnMakeExtendRequest.Enabled = true;
+                    }
+                    else
+                    {
+                        btnMakeExtendRequest.Enabled = false;
+                    }
                 }
             }
             catch(Exception ex)

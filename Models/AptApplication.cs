@@ -24,5 +24,8 @@ namespace E_Apartments.Models
         public DateTime ResrvedFrom { get; set; }
 
         public DateTime ResrvedTo { get; set; }
+
+        public int? AddParkingId { get; set; }
+        public AdditionalParking AdditionalParking { get; set; }
     }
 }

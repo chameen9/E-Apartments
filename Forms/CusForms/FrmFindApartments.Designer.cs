@@ -286,7 +286,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmFindApartments";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmFindApartments";
+            this.Text = "Find an Apartment";
             this.Load += new System.EventHandler(this.FrmFindApartments_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

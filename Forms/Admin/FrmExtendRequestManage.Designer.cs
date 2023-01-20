@@ -35,6 +35,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmExtendRequestManage));
             this.DGridReqests = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnExportPdf = new FontAwesome.Sharp.IconButton();
+            this.lblNewRfa = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblBalance = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblRfa = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAccept = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,12 +52,6 @@
             this.txtLeaseId = new System.Windows.Forms.TextBox();
             this.txtApartmentId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblRfa = new System.Windows.Forms.Label();
-            this.lblBalance = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblNewRfa = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGridReqests)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +109,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnExportPdf);
             this.groupBox1.Controls.Add(this.lblNewRfa);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.lblBalance);
@@ -131,6 +133,80 @@
             this.groupBox1.TabIndex = 101;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Extend Request";
+            // 
+            // btnExportPdf
+            // 
+            this.btnExportPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
+            this.btnExportPdf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportPdf.FlatAppearance.BorderSize = 0;
+            this.btnExportPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportPdf.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
+            this.btnExportPdf.IconColor = System.Drawing.Color.White;
+            this.btnExportPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExportPdf.IconSize = 25;
+            this.btnExportPdf.Location = new System.Drawing.Point(779, 23);
+            this.btnExportPdf.Name = "btnExportPdf";
+            this.btnExportPdf.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnExportPdf.Size = new System.Drawing.Size(114, 31);
+            this.btnExportPdf.TabIndex = 110;
+            this.btnExportPdf.Text = "Export";
+            this.btnExportPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExportPdf.UseVisualStyleBackColor = false;
+            this.btnExportPdf.Click += new System.EventHandler(this.btnExportPdf_Click);
+            // 
+            // lblNewRfa
+            // 
+            this.lblNewRfa.AutoSize = true;
+            this.lblNewRfa.Location = new System.Drawing.Point(774, 165);
+            this.lblNewRfa.Name = "lblNewRfa";
+            this.lblNewRfa.Size = new System.Drawing.Size(22, 25);
+            this.lblNewRfa.TabIndex = 58;
+            this.lblNewRfa.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(733, 165);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 25);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "Rs.";
+            // 
+            // lblBalance
+            // 
+            this.lblBalance.AutoSize = true;
+            this.lblBalance.Location = new System.Drawing.Point(774, 118);
+            this.lblBalance.Name = "lblBalance";
+            this.lblBalance.Size = new System.Drawing.Size(22, 25);
+            this.lblBalance.TabIndex = 56;
+            this.lblBalance.Text = "0";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(733, 118);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 25);
+            this.label9.TabIndex = 55;
+            this.label9.Text = "Rs.";
+            // 
+            // lblRfa
+            // 
+            this.lblRfa.AutoSize = true;
+            this.lblRfa.Location = new System.Drawing.Point(774, 73);
+            this.lblRfa.Name = "lblRfa";
+            this.lblRfa.Size = new System.Drawing.Size(22, 25);
+            this.lblRfa.TabIndex = 54;
+            this.lblRfa.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(506, 165);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(220, 25);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "New Refundable Amount :";
             // 
             // label6
             // 
@@ -220,60 +296,6 @@
             this.label3.TabIndex = 44;
             this.label3.Text = "Apartment ID";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(506, 165);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(220, 25);
-            this.label5.TabIndex = 53;
-            this.label5.Text = "New Refundable Amount :";
-            // 
-            // lblRfa
-            // 
-            this.lblRfa.AutoSize = true;
-            this.lblRfa.Location = new System.Drawing.Point(774, 73);
-            this.lblRfa.Name = "lblRfa";
-            this.lblRfa.Size = new System.Drawing.Size(22, 25);
-            this.lblRfa.TabIndex = 54;
-            this.lblRfa.Text = "0";
-            // 
-            // lblBalance
-            // 
-            this.lblBalance.AutoSize = true;
-            this.lblBalance.Location = new System.Drawing.Point(774, 118);
-            this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(22, 25);
-            this.lblBalance.TabIndex = 56;
-            this.lblBalance.Text = "0";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(733, 118);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 25);
-            this.label9.TabIndex = 55;
-            this.label9.Text = "Rs.";
-            // 
-            // lblNewRfa
-            // 
-            this.lblNewRfa.AutoSize = true;
-            this.lblNewRfa.Location = new System.Drawing.Point(774, 165);
-            this.lblNewRfa.Name = "lblNewRfa";
-            this.lblNewRfa.Size = new System.Drawing.Size(22, 25);
-            this.lblNewRfa.TabIndex = 58;
-            this.lblNewRfa.Text = "0";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(733, 165);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 25);
-            this.label12.TabIndex = 57;
-            this.label12.Text = "Rs.";
-            // 
             // FrmExtendRequestManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -289,7 +311,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmExtendRequestManage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmExtendRequestManage";
+            this.Text = "Manage Extend Requests";
             this.Load += new System.EventHandler(this.FrmExtendRequestManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGridReqests)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -318,5 +340,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblRfa;
         private System.Windows.Forms.Label label5;
+        private FontAwesome.Sharp.IconButton btnExportPdf;
     }
 }
