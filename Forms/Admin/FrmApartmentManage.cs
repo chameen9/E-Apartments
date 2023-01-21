@@ -110,6 +110,7 @@ namespace E_Apartments.Forms.Admin
             {
                 _appDbContext = new AppDbContext();
                 DGridApartments.DataSource = _appDbContext.Apartments
+                    .Where(x=>x.DeletedAt != null)
                     .Select(x => new { ID = x.ApartmentId, Floor = x.FloorNumber, Building = x.BuildingId, Parking = x.ParkingId ,Class = x.ClassId })
                     .ToList();
             }
@@ -350,7 +351,10 @@ namespace E_Apartments.Forms.Admin
                     var selectedApartment = _appDbContext.Apartments.FirstOrDefault(c => c.ApartmentId == selectedApartmentId);
                     if (selectedApartment != null)
                     {
-                        _appDbContext.Apartments.Remove(selectedApartment);
+                        //_appDbContext.Apartments.Remove(selectedApartment);
+                        selectedApartment.DeletedAt = DateTime.Now;
+                        _appDbContext.Entry(selectedApartment).State = System.Data.Entity.EntityState.Modified;
+
                         _appDbContext.SaveChanges();
                         MessageBox.Show("Apartment : " + selectedApartmentId + " removed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         loadApartmentIds();

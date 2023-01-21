@@ -46,6 +46,9 @@ namespace E_Apartments.Forms
 
         public static int OccupentsCount;
 
+
+        // Custom Methods
+
         /// <summary>Erases the customer details.</summary>
         /// <param name="clearCusName">if set to <c>true</c> [clear cus name].</param>
         private void EraseCustomerDetails(bool clearCusName)
@@ -65,6 +68,79 @@ namespace E_Apartments.Forms
             txtCusNIC.Text = string.Empty;
             txtCusAddress.Text = string.Empty;
         }
+
+        /// <summary>Customers the data fields status.</summary>
+        /// <param name="ActiveStatus">if set to <c>true</c> [active status].</param>
+        private void CustomerDataFieldsStatus(bool ActiveStatus)
+        {
+            txtCusName.Enabled = ActiveStatus;
+            nmbCusAge.Enabled = ActiveStatus;
+            txtCusEmail.Enabled = ActiveStatus;
+            txtCusPhone.Enabled = ActiveStatus;
+            txtCusNIC.Enabled = ActiveStatus;
+            txtCusAddress.Enabled = ActiveStatus;
+            btnAddCustomer.Enabled = ActiveStatus;
+            btnClear.Enabled = ActiveStatus;
+        }
+
+        /// <summary>Shows the datain grid with details.</summary>
+        private void ShowDatainGridWithDetails()   // get and show extracted data from datagrid
+        {
+            try
+            {
+                _appDbContext = new AppDbContext();
+                DGridDependents.DataSource = _appDbContext.Dependents.Where(x => x.CustomerId == customerId)
+                    .Select(x => new { Name = x.DependentName, Relation = x.Relationship, Age = x.Age })
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>Shows the datain grid without details.</summary>
+        private void ShowDatainGridWithoutDetails() // get and show columns from datagrid
+        {
+            try
+            {
+                _appDbContext = new AppDbContext();
+                DGridDependents.DataSource = _appDbContext.Dependents.Where(x => x.CustomerId == Guid.NewGuid())
+                    .Select(x => new { Name = x.DependentName, Relation = x.Relationship, Age = x.Age })
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>Gets the occupent count.</summary>
+        /// <param name="Skipped">if set to <c>true</c> [skipped].</param>
+        private void GetOccupentCount(bool Skipped)
+        {
+            if (Skipped)
+            {
+                OccupentsCount = 1;
+            }
+            else
+            {
+                OccupentsCount = DGridDependents.RowCount + 1; // with the customer
+            }
+        }
+
+        /// <summary>Erases the dependent details.</summary>
+        private void EraseDependentDetails()
+        {
+            txtDepName.Text = String.Empty;
+            nmbDepAge.Value = 0;
+            cmbDepRelation.SelectedIndex = 0;
+        }
+
+
+
+        // Events
+
 
         private void btnClear_Click(object sender, EventArgs e)
         {
@@ -162,19 +238,7 @@ namespace E_Apartments.Forms
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        /// <summary>Customers the data fields status.</summary>
-        /// <param name="ActiveStatus">if set to <c>true</c> [active status].</param>
-        private void CustomerDataFieldsStatus(bool ActiveStatus)
-        {
-            txtCusName.Enabled = ActiveStatus;
-            nmbCusAge.Enabled = ActiveStatus;
-            txtCusEmail.Enabled = ActiveStatus;
-            txtCusPhone.Enabled = ActiveStatus;
-            txtCusNIC.Enabled = ActiveStatus;
-            txtCusAddress.Enabled = ActiveStatus;
-            btnAddCustomer.Enabled = ActiveStatus;
-            btnClear.Enabled = ActiveStatus;
-        }
+        
         /// <summary>BTNs the status change event.</summary>
         /// <param name="sender">The sender.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -265,50 +329,6 @@ namespace E_Apartments.Forms
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        /// <summary>Shows the datain grid with details.</summary>
-        private void ShowDatainGridWithDetails()   // get and show extracted data from datagrid
-        {
-            try
-            {
-                _appDbContext = new AppDbContext();
-                DGridDependents.DataSource = _appDbContext.Dependents.Where(x => x.CustomerId == customerId)
-                    .Select(x => new { Name = x.DependentName, Relation = x.Relationship, Age = x.Age })
-                    .ToList();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        /// <summary>Shows the datain grid without details.</summary>
-        private void ShowDatainGridWithoutDetails() // get and show columns from datagrid
-        {
-            try
-            {
-                _appDbContext = new AppDbContext();
-                DGridDependents.DataSource = _appDbContext.Dependents.Where(x => x.CustomerId == Guid.NewGuid())
-                    .Select(x => new { Name = x.DependentName, Relation = x.Relationship, Age = x.Age })
-                    .ToList();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>Gets the occupent count.</summary>
-        /// <param name="Skipped">if set to <c>true</c> [skipped].</param>
-        private void GetOccupentCount(bool Skipped)
-        {
-            if (Skipped)
-            {
-                OccupentsCount = 1;
-            }
-            else
-            {
-                OccupentsCount = DGridDependents.RowCount + 1; // with the customer
-            }
-        }
 
         /// <summary>Handles the Load event of the FrmAddCustomer control.</summary>
         /// <param name="sender">The source of the event.</param>
@@ -325,14 +345,6 @@ namespace E_Apartments.Forms
         private void btnClearDependentDetails_Click(object sender, EventArgs e)
         {
             EraseDependentDetails();
-        }
-
-        /// <summary>Erases the dependent details.</summary>
-        private void EraseDependentDetails()
-        {
-            txtDepName.Text = String.Empty;
-            nmbDepAge.Value = 0;
-            cmbDepRelation.SelectedIndex = 0;
         }
 
         /// <summary>Handles the Click event of the btnSkip control.</summary>

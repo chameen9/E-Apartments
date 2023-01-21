@@ -40,6 +40,8 @@ namespace E_Apartments.Models
         public Class Class { get; set; }
         //FK
 
+        public DateTime? DeletedAt { get; set; }
+
         public ICollection<Reservation> Reservation { get; set; }
         public ICollection<AptApplication> AptApplication { get; set; }
     }

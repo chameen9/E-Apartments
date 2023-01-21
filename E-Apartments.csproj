@@ -434,6 +434,10 @@
     <Compile Include="Migrations\202301201400002_add adpId to application2.designer.cs">
       <DependentUpon>202301201400002_add adpId to application2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301211559457_DA apartment.cs" />
+    <Compile Include="Migrations\202301211559457_DA apartment.designer.cs">
+      <DependentUpon>202301211559457_DA apartment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdditionalParking.cs" />
     <Compile Include="Models\Apartment.cs" />
@@ -609,6 +613,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301201400002_add adpId to application2.resx">
       <DependentUpon>202301201400002_add adpId to application2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301211559457_DA apartment.resx">
+      <DependentUpon>202301211559457_DA apartment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

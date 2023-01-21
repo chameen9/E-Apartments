@@ -92,9 +92,9 @@
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 156);
+            this.panel2.Location = new System.Drawing.Point(0, 178);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 564);
+            this.panel2.Size = new System.Drawing.Size(250, 542);
             this.panel2.TabIndex = 207;
             // 
             // panel6
@@ -103,7 +103,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 495);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(250, 69);
+            this.panel6.Size = new System.Drawing.Size(250, 45);
             this.panel6.TabIndex = 6;
             // 
             // btnNavAddUsers
@@ -190,7 +190,7 @@
             this.btnNavManageApplications.Size = new System.Drawing.Size(250, 45);
             this.btnNavManageApplications.TabIndex = 4;
             this.btnNavManageApplications.TabStop = false;
-            this.btnNavManageApplications.Text = "Manage App:";
+            this.btnNavManageApplications.Text = "Manage Application";
             this.btnNavManageApplications.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNavManageApplications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNavManageApplications.UseVisualStyleBackColor = false;
@@ -264,7 +264,7 @@
             this.btnNavManageReservations.Size = new System.Drawing.Size(250, 45);
             this.btnNavManageReservations.TabIndex = 0;
             this.btnNavManageReservations.TabStop = false;
-            this.btnNavManageReservations.Text = "Manage Rsv:";
+            this.btnNavManageReservations.Text = "Manage Reservat:";
             this.btnNavManageReservations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNavManageReservations.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNavManageReservations.UseVisualStyleBackColor = false;
@@ -363,7 +363,7 @@
             this.btnNavManageApartments.Size = new System.Drawing.Size(250, 45);
             this.btnNavManageApartments.TabIndex = 0;
             this.btnNavManageApartments.TabStop = false;
-            this.btnNavManageApartments.Text = "Manage Apt:";
+            this.btnNavManageApartments.Text = "Manage Apartment";
             this.btnNavManageApartments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNavManageApartments.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNavManageApartments.UseVisualStyleBackColor = false;
@@ -439,7 +439,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 156);
+            this.panel1.Size = new System.Drawing.Size(250, 178);
             this.panel1.TabIndex = 206;
             // 
             // picUser
