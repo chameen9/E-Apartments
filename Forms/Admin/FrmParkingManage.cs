@@ -24,6 +24,9 @@ namespace E_Apartments.Forms.Admin
         }
         AppDbContext _appDbContext;
 
+        /// <summary>Changes the feild status.</summary>
+        /// <param name="Primary">if set to <c>true</c> [primary].</param>
+        /// <param name="Secondary">if set to <c>true</c> [secondary].</param>
         private void changeFeildStatus(bool Primary, bool Secondary)
         {
             btnClose.Visible = Primary;
@@ -37,6 +40,7 @@ namespace E_Apartments.Forms.Admin
             btnClear.Visible = Secondary;
             btnAdd.Visible = Secondary;
         }
+        /// <summary>Loads the building ids.</summary>
         private void loadBuildingIds()
         {
             try
@@ -52,6 +56,7 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Loads the parking i ds.</summary>
         private void loadParkingIDs()
         {
             try
@@ -66,6 +71,7 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Loads the parking statuses.</summary>
         private void loadParkingStatuses()
         {
             try
@@ -81,12 +87,14 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>BTNs the search event.</summary>
         private void btnSearchEvent()
         {
             changeFeildStatus(true, false);
             loadParkingIDs();
             cmbParkingId.SelectedIndex = 0;
         }
+        /// <summary>Views the grid.</summary>
         private void ViewGrid()
         {
             try
@@ -101,6 +109,8 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Clears the specified text focus.</summary>
+        /// <param name="txtFocus">if set to <c>true</c> [text focus].</param>
         private void clear(bool txtFocus)
         {
             txtParkingId.Text = string.Empty;
@@ -115,6 +125,9 @@ namespace E_Apartments.Forms.Admin
                 cmbBuildingId.Focus();
             }
         }
+        /// <summary>Fetches the data to fields.</summary>
+        /// <param name="key">The key.</param>
+        /// <param name="selectedIndex">Index of the selected.</param>
         private void fetchDataToFields(string key, int selectedIndex)
         {
             try
@@ -142,6 +155,7 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Filters the d grid.</summary>
         private void filterDGrid()
         {
             try
@@ -189,6 +203,9 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the Load event of the FrmParkingManage control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmParkingManage_Load(object sender, EventArgs e)
         {
             loadParkingStatuses();
@@ -197,11 +214,17 @@ namespace E_Apartments.Forms.Admin
             ViewGrid();
         }
 
+        /// <summary>Handles the Click event of the btnClear control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnClear_Click(object sender, EventArgs e)
         {
             clear(true);
         }
 
+        /// <summary>Handles the Click event of the btnAdd control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -250,6 +273,9 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the Click event of the btnUpdate control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -286,6 +312,9 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the Click event of the btnDelete control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to delete the selected item?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -317,17 +346,26 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the Click event of the btnSearch control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnSearch_Click(object sender, EventArgs e)
         {
             btnSearchEvent();
         }
 
+        /// <summary>Handles the Click event of the btnClose control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnClose_Click(object sender, EventArgs e)
         {
             changeFeildStatus(false, true);
             clear(true);
         }
 
+        /// <summary>Handles the SelectedIndexChanged event of the cmbParkingId control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbParkingId_SelectedIndexChanged(object sender, EventArgs e)
         {
             fetchDataToFields(cmbParkingId.Text.ToString(), cmbParkingId.SelectedIndex);
@@ -340,12 +378,18 @@ namespace E_Apartments.Forms.Admin
             //cmbParkingId.Text = key;
             //fetchDataToFields(key, cmbParkingId.SelectedIndex);
         }
-        
+
+        /// <summary>Handles the SelectedIndexChanged event of the cmbFilterBuilding control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbFilterBuilding_SelectedIndexChanged(object sender, EventArgs e)
         {
             filterDGrid();
         }
 
+        /// <summary>Handles the SelectedIndexChanged event of the cmbFilterStatus control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbFilterStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             filterDGrid();

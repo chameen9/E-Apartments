@@ -30,6 +30,7 @@ namespace E_Apartments.Forms.Admin
         public static double newRefundableAmount;
         public static DateTime EstEndDate;
 
+        /// <summary>Views the grid.</summary>
         private void viewGrid()
         {
             try
@@ -46,11 +47,17 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the Load event of the FrmExtendRequestManage control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmExtendRequestManage_Load(object sender, EventArgs e)
         {
             viewGrid();
         }
 
+        /// <summary>Handles the CellContentClick event of the DGridReqests control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="DataGridViewCellEventArgs" /> instance containing the event data.</param>
         private void DGridReqests_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             btnAccept.Enabled = true;
@@ -96,7 +103,10 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show("No Requests Selected.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
-        
+
+        /// <summary>Handles the Click event of the btnAccept control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnAccept_Click(object sender, EventArgs e)
         {
             if(txtLeaseId.Text == string.Empty || txtCustomerName.Text == string.Empty || txtApartmentId.Text == string.Empty)
@@ -163,6 +173,9 @@ namespace E_Apartments.Forms.Admin
             
         }
 
+        /// <summary>Handles the Click event of the btnExportPdf control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnExportPdf_Click(object sender, EventArgs e)
         {
             if (DGridReqests.Rows.Count > 0)
@@ -243,6 +256,16 @@ namespace E_Apartments.Forms.Admin
             {
                 MessageBox.Show("Cannot export a report without data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        /// <summary>Handles the Click event of the label7 control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
+        private void label7_Click(object sender, EventArgs e)
+        {
+            FrmAllLeasings frmAllLeasings = new FrmAllLeasings();
+            frmAllLeasings.FormClosed += (s, args) => this.Enabled = true;
+            frmAllLeasings.ShowDialog();
         }
     }
 }

@@ -12,6 +12,7 @@ namespace E_Apartments.Forms
 {
     public partial class FrmWaitDashboard : Form
     {
+        /// <summary>Initializes a new instance of the <see cref="FrmWaitDashboard" /> class.</summary>
         public FrmWaitDashboard()
         {
             InitializeComponent();
@@ -22,10 +23,16 @@ namespace E_Apartments.Forms
             timer.Start();
         }
 
+        /// <summary>Handles the Load event of the FrmWaitDashboard control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmWaitDashboard_Load(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
         }
+        /// <summary>Handles the Tick event of the timer control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void timer_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();

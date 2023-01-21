@@ -19,6 +19,7 @@ namespace E_Apartments.Forms.Clerk
         }
         AppDbContext _appDbContext;
 
+        /// <summary>Loads the class ids.</summary>
         private void loadClassIds()
         {
             try
@@ -33,15 +34,24 @@ namespace E_Apartments.Forms.Clerk
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Handles the Load event of the FrmClassInfo control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmClassInfo_Load(object sender, EventArgs e)
         {
             loadClassIds();
         }
 
+        /// <summary>Handles the SelectedIndexChanged event of the cmbClassID control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbClassID_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadClassDetailsToFields(cmbClassID.Text,cmbClassID.SelectedIndex);
         }
+        /// <summary>Loads the class details to fields.</summary>
+        /// <param name="key">The key.</param>
+        /// <param name="selectedIndex">Index of the selected.</param>
         private void LoadClassDetailsToFields(string key, int selectedIndex)
         {
             try
@@ -77,6 +87,7 @@ namespace E_Apartments.Forms.Clerk
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Clears this instance.</summary>
         private void Clear()
         {
             
@@ -93,6 +104,9 @@ namespace E_Apartments.Forms.Clerk
             nmbServentRoomsCount.Value = 0;
         }
 
+        /// <summary>Handles the Click event of the btnSearch control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnSearch_Click(object sender, EventArgs e)
         {
             loadClassIds();

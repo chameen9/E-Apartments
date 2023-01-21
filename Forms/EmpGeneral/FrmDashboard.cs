@@ -32,6 +32,9 @@ namespace E_Apartments.Forms
         private extern static void SendMessage(System.IntPtr one, int two, int three, int four);
         // for panel to act as the ribbon
 
+        /// <summary>Handles the Load event of the FrmDashboard control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmDashboard_Load(object sender, EventArgs e)
         {
             
@@ -59,6 +62,7 @@ namespace E_Apartments.Forms
                 btnNavAddParkings.Visible = false;
                 btnNavAddUsers.Visible = false;
                 btnNavManageApplications.Visible = false;
+                btnNavCustomers.Visible = false;
             }
             
             else if(FrmLogin.userType == "Admin")
@@ -75,6 +79,7 @@ namespace E_Apartments.Forms
                 btnNavExtendRequests.Visible = true;
                 btnNavAddParkings.Visible = true;
                 btnNavManageApplications.Visible = true;
+                btnNavCustomers.Visible = true;
 
                 btnNavAddUsers.Visible = false;
             }
@@ -92,6 +97,7 @@ namespace E_Apartments.Forms
                 btnNavExtendRequests.Visible = true;
                 btnNavAddParkings.Visible = true;
                 btnNavManageApplications.Visible = true;
+                btnNavCustomers.Visible = true;
 
                 btnNavAddUsers.Visible = true;
             }
@@ -109,8 +115,11 @@ namespace E_Apartments.Forms
                 btnNavAddParkings.Visible = false;
                 btnNavAddUsers.Visible = false;
                 btnNavManageApplications.Visible = false;
+                btnNavCustomers.Visible = false;
             }
         }
+        /// <summary>Changes the button properties.</summary>
+        /// <param name="clickedButton">The clicked button.</param>
         private void ChangeButtonProperties(IconButton clickedButton)
         {
             List<IconButton> allButtons = new List<IconButton> { 
@@ -125,7 +134,8 @@ namespace E_Apartments.Forms
                 btnNavExtendRequests,
                 btnNavAddParkings,
                 btnNavAddUsers,
-                btnNavManageApplications
+                btnNavManageApplications,
+                btnNavCustomers
             };
 
             foreach (IconButton button in allButtons)
@@ -146,6 +156,7 @@ namespace E_Apartments.Forms
             lbluserName.ForeColor = Color.White;
             picUser.IconColor = Color.SteelBlue;
         }
+        /// <summary>Resets the button properties.</summary>
         private void ResetButtonProperties()
         {
             List<IconButton> allButtons = new List<IconButton> {
@@ -160,7 +171,8 @@ namespace E_Apartments.Forms
                 btnNavExtendRequests,
                 btnNavAddParkings,
                 btnNavAddUsers,
-                btnNavManageApplications
+                btnNavManageApplications,
+                btnNavCustomers
             };
 
             foreach (IconButton button in allButtons)
@@ -172,31 +184,18 @@ namespace E_Apartments.Forms
             
         }
 
+        /// <summary>Handles the MouseDown event of the pnlRibbon control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="MouseEventArgs" /> instance containing the event data.</param>
         private void pnlRibbon_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnNavAddCusomer_Click(object sender, EventArgs e)
-        {
-            //navigateAddCustomer();
-        }
-        private void navigateAddCustomer()
-        {
-            //ChangeButtonProperties(btnNavAddCustomer);
-
-            lblFormTopic.Text = "Register Customer";
-            iconTitle.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            pnlMain.Controls.Clear();
-
-            FrmAddCustomer frmAddCustomer = new FrmAddCustomer();
-            frmAddCustomer.TopLevel = false;
-            pnlMain.Controls.Add(frmAddCustomer);
-            frmAddCustomer.Dock = DockStyle.Fill;
-            frmAddCustomer.Show();
-        }
-
+        /// <summary>Handles the Click event of the btnNavAddLease control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavAddLease_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavManageReservations);
@@ -211,18 +210,27 @@ namespace E_Apartments.Forms
             frmManageReservations.Dock = DockStyle.Fill;
             frmManageReservations.Show();
         }
-        
 
+
+        /// <summary>Handles the 1 event of the btnExit_Click control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>Handles the Click event of the btnMinimize control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        /// <summary>Handles the Click event of the picLogo control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void picLogo_Click(object sender, EventArgs e)
         {
             lblFormTopic.Text = "Dashboard";
@@ -241,6 +249,9 @@ namespace E_Apartments.Forms
             picUser.IconColor = Color.SteelBlue;
         }
 
+        /// <summary>Handles the Click event of the btnNavCheckAvailability control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavCheckAvailability_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavCheckAvailability);
@@ -256,6 +267,9 @@ namespace E_Apartments.Forms
             frmCheckAvailability.Show();
         }
 
+        /// <summary>Handles the Click event of the btnNavClassInfo control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavClassInfo_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavClassInfo);
@@ -271,6 +285,9 @@ namespace E_Apartments.Forms
             frmClassInfo.Show();
         }
 
+        /// <summary>Handles the Click event of the btnLogout control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnLogout_Click(object sender, EventArgs e)
         {
             FrmLogin frmLogin = new FrmLogin();
@@ -278,6 +295,9 @@ namespace E_Apartments.Forms
             this.Hide();
         }
 
+        /// <summary>Handles the Click event of the btnNavManageClasses control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavManageClasses_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavManageClasses);
@@ -293,6 +313,9 @@ namespace E_Apartments.Forms
             frmClassManage.Show();
         }
 
+        /// <summary>Handles the Click event of the btnNavManageBuildings control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavManageBuildings_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavManageBuildings);
@@ -308,6 +331,9 @@ namespace E_Apartments.Forms
             frmBuildingManage.Show();
         }
 
+        /// <summary>Handles the Click event of the btnNavManageApartments control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavManageApartments_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavManageApartments);
@@ -323,6 +349,9 @@ namespace E_Apartments.Forms
             frmApartmentManage.Show();
         }
 
+        /// <summary>Handles the Click event of the btnNavManageParkings control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavManageParkings_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavManageParkings);
@@ -338,6 +367,9 @@ namespace E_Apartments.Forms
             frmParkingManage.Show();
         }
 
+        /// <summary>Handles the Click event of the btnNavExtendRequests control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavExtendRequests_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavExtendRequests);
@@ -353,6 +385,9 @@ namespace E_Apartments.Forms
             frmExtendRequestManage.Show(); 
         }
 
+        /// <summary>Handles the Click event of the btnNavAddParkings control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavAddParkings_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavAddParkings);
@@ -368,6 +403,9 @@ namespace E_Apartments.Forms
             frmManageAdditionalParkings.Show();
         }
 
+        /// <summary>Handles the Click event of the btnNavAddUsers control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavAddUsers_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavAddUsers);
@@ -383,6 +421,9 @@ namespace E_Apartments.Forms
             frmAddUsers.Show();
         }
 
+        /// <summary>Handles the Click event of the lbluserName control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void lbluserName_Click(object sender, EventArgs e)
         {
             lbluserName.ForeColor = Color.FromArgb(0, 143, 251);
@@ -403,6 +444,9 @@ namespace E_Apartments.Forms
             frmUserProfile.Show();
         }
 
+        /// <summary>Handles the Click event of the btnNavManageApplications control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavManageApplications_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavManageApplications);
@@ -416,6 +460,24 @@ namespace E_Apartments.Forms
             pnlMain.Controls.Add(frmManageApplications);
             frmManageApplications.Dock = DockStyle.Fill;
             frmManageApplications.Show();
+        }
+
+        /// <summary>Handles the Click event of the btnNavCustomers control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
+        private void btnNavCustomers_Click(object sender, EventArgs e)
+        {
+            ChangeButtonProperties(btnNavCustomers);
+
+            lblFormTopic.Text = "Customers";
+            iconTitle.IconChar = FontAwesome.Sharp.IconChar.UsersBetweenLines;
+            pnlMain.Controls.Clear();
+
+            FrmManageCustomers frmManageCustomers = new FrmManageCustomers();
+            frmManageCustomers.TopLevel = false;
+            pnlMain.Controls.Add(frmManageCustomers);
+            frmManageCustomers.Dock = DockStyle.Fill;
+            frmManageCustomers.Show();
         }
     }
 }

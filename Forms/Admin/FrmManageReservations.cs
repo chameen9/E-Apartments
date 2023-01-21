@@ -24,6 +24,9 @@ namespace E_Apartments.Forms.Admin
             toolTip.SetToolTip(btnExportPdf, "Click to export the"+Environment.NewLine+"reservations data"+ Environment.NewLine + "as a PDF file");
         }
         AppDbContext _appDbContext;
+        /// <summary>Handles the Load event of the FrmManageReservations control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmManageReservations_Load(object sender, EventArgs e)
         {
             try
@@ -65,6 +68,9 @@ namespace E_Apartments.Forms.Admin
         public static string Balance;
         public static string Status;
 
+        /// <summary>Handles the CellContentClick event of the DGridReservations control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="DataGridViewCellEventArgs" /> instance containing the event data.</param>
         private void DGridReservations_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if(DGridReservations.Rows.Count > 0)
@@ -92,6 +98,9 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the Click event of the btnExportPdf control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnExportPdf_Click(object sender, EventArgs e)
         {
             if (DGridReservations.Rows.Count > 0)

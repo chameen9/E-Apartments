@@ -30,6 +30,9 @@ namespace E_Apartments.Forms.CusForms
         }
         AppDbContext _appDbContext;
 
+        /// <summary>Handles the Load event of the FrmMakeReservation control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmMakeReservation_Load(object sender, EventArgs e)
         {
             lblCusId.Text = FrmCusApartmentManager.CustomerID;
@@ -47,12 +50,16 @@ namespace E_Apartments.Forms.CusForms
             txtEmail.Text = FrmCusApartmentManager.CustomerEmail;
         }
 
+        /// <summary>Handles the Click event of the btnCancel control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
         public double addParki;
 
+        /// <summary>Calonlies this instance.</summary>
         private void calonly()
         {
             int months = ((dtpReservedTo.Value.Year - dtpReservedFrom.Value.Year) * 12) + dtpReservedTo.Value.Month - dtpReservedFrom.Value.Month;
@@ -76,6 +83,7 @@ namespace E_Apartments.Forms.CusForms
             lblTot.Text = "Payble Amount      : Rs." + TotalPayble.ToString();
         }
 
+        /// <summary>Calculations this instance.</summary>
         private void calculation()
         {
             if (dtpReservedFrom.Value >= DateTime.Today)
@@ -124,6 +132,9 @@ namespace E_Apartments.Forms.CusForms
         public double RfFee;
         public double AddPaFee;
         public double MontIns;
+        /// <summary>Handles the Click event of the btnReserve control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnReserve_Click(object sender, EventArgs e)
         {
             if (dtpReservedFrom.Value >= DateTime.Today)
@@ -281,11 +292,17 @@ namespace E_Apartments.Forms.CusForms
             
         }
 
+        /// <summary>Handles the ValueChanged event of the dtpReservedTo control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void dtpReservedTo_ValueChanged(object sender, EventArgs e)
         {
             calculation();
         }
 
+        /// <summary>Handles the ValueChanged event of the dtpReservedFrom control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void dtpReservedFrom_ValueChanged(object sender, EventArgs e)
         {
             calculation();

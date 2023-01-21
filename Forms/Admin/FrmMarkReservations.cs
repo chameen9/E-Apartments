@@ -19,11 +19,17 @@ namespace E_Apartments.Forms.Admin
             InitializeComponent();
         }
         AppDbContext _appDbContext;
+        /// <summary>Handles the Click event of the btnCancel control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
         public Guid thisLeasingId;
+        /// <summary>Handles the Click event of the btnLaese control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnLaese_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Before leasing this apartment, Please Make sure all the dues are Payed by the Customer."+Environment.NewLine+"Click Ok to cinfirm the payments and confirm the Lease.","Confirm",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
@@ -106,6 +112,9 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the Load event of the FrmMarkReservations control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmMarkReservations_Load(object sender, EventArgs e)
         {
             try

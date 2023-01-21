@@ -23,6 +23,9 @@ namespace E_Apartments.Forms.CusForms
 
         public static Guid guidLeasingId;
         public DateTime LeasingExpireDate;
+        /// <summary>Handles the Load event of the FrmExtendLeasing control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmExtendLeasing_Load(object sender, EventArgs e)
         {
             try
@@ -64,6 +67,9 @@ namespace E_Apartments.Forms.CusForms
             
         }
 
+        /// <summary>Handles the Click event of the btnMakeExtendRequest control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnMakeExtendRequest_Click(object sender, EventArgs e)
         {
             if (dtpExtendedTo.Value.Date < LeasingExpireDate.AddMonths(2))

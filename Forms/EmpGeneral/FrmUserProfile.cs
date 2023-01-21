@@ -19,6 +19,9 @@ namespace E_Apartments.Forms.EmpGeneral
         }
         AppDbContext _appDbContext;
         public string thisUsersPassword;
+        /// <summary>Handles the Click event of the btnDefaultShowPw control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnDefaultShowPw_Click(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = false;
@@ -26,6 +29,9 @@ namespace E_Apartments.Forms.EmpGeneral
             btnDefaultShowPw.Visible = false;
         }
 
+        /// <summary>Handles the Click event of the btnDefaultHidePw control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnDefaultHidePw_Click(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = true;
@@ -33,6 +39,9 @@ namespace E_Apartments.Forms.EmpGeneral
             btnDefaultShowPw.Visible = true;
         }
 
+        /// <summary>Handles the Click event of the btnShowPw control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnShowPw_Click(object sender, EventArgs e)
         {
             txtNewPassword.UseSystemPasswordChar = false;
@@ -42,6 +51,9 @@ namespace E_Apartments.Forms.EmpGeneral
             btnShowPw.Visible = false;
         }
 
+        /// <summary>Handles the Click event of the btnHidePw control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnHidePw_Click(object sender, EventArgs e)
         {
             txtNewPassword.UseSystemPasswordChar = true;
@@ -51,6 +63,9 @@ namespace E_Apartments.Forms.EmpGeneral
             btnShowPw.Visible = true;
         }
 
+        /// <summary>Handles the Load event of the FrmUserProfile control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmUserProfile_Load(object sender, EventArgs e)
         {
             if(FrmLogin.userName != null)
@@ -91,6 +106,9 @@ namespace E_Apartments.Forms.EmpGeneral
             }
         }
 
+        /// <summary>Handles the TextChanged event of the txtPassword control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             if (txtPassword.Text == thisUsersPassword)
@@ -109,6 +127,9 @@ namespace E_Apartments.Forms.EmpGeneral
             }
         }
 
+        /// <summary>Handles the Click event of the btnUpdate control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if(txtNewPassword.Text != string.Empty && txtConfirmedPassword.Text != string.Empty)
@@ -165,12 +186,16 @@ namespace E_Apartments.Forms.EmpGeneral
                 MessageBox.Show("Please enter a proper password.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        /// <summary>Clears this instance.</summary>
         private void clear()
         {
             txtPassword.Text = string.Empty;
             txtNewPassword.Text = string.Empty;
             txtConfirmedPassword.Text = string.Empty;
         }
+        /// <summary>Handles the Click event of the btnClear control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnClear_Click(object sender, EventArgs e)
         {
             clear();

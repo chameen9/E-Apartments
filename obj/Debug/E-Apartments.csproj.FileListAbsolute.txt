@@ -322,3 +322,5 @@ D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Migrations.addadp
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.CusForms.FrmCusApplications.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmManageApplications.resources
 D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmMarkApplications.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmManageCustomers.resources
+D:\Beng (Hons)\AD\Software\E-Apartments\obj\Debug\E_Apartments.Forms.Admin.FrmAllLeasings.resources

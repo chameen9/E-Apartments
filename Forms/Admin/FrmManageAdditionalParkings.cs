@@ -23,6 +23,7 @@ namespace E_Apartments.Forms.Admin
         AppDbContext _appDbContext;
 
 
+        /// <summary>Loads the building ids.</summary>
         private void loadBuildingIds()
         {
             try
@@ -38,7 +39,8 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
+        /// <summary>Loads the parking statuses.</summary>
         private void loadParkingStatuses()
         {
             try
@@ -54,7 +56,8 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
-        
+
+        /// <summary>Views the grid.</summary>
         private void ViewGrid()
         {
             try
@@ -69,6 +72,7 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Clears this instance.</summary>
         private void clear()
         {
             nmbParkingId.Value = 0;
@@ -77,6 +81,9 @@ namespace E_Apartments.Forms.Admin
             cmbFilterStatus.SelectedIndex= 0;
             
         }
+        /// <summary>Fetches the data to fields.</summary>
+        /// <param name="key">The key.</param>
+        /// <param name="selectedIndex">Index of the selected.</param>
         private void fetchDataToFields(string key, int selectedIndex)
         {
             try
@@ -102,6 +109,7 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Filters the d grid.</summary>
         private void filterDGrid()
         {
             try
@@ -149,6 +157,9 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the Load event of the FrmManageAdditionalParkings control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmManageAdditionalParkings_Load(object sender, EventArgs e)
         {
             loadParkingStatuses();
@@ -157,11 +168,17 @@ namespace E_Apartments.Forms.Admin
             ViewGrid();
         }
 
+        /// <summary>Handles the Click event of the btnClear control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnClear_Click(object sender, EventArgs e)
         {
             clear();
         }
 
+        /// <summary>Handles the Click event of the btnAdd control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -211,36 +228,17 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void cmbParkingId_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+        /// <summary>Handles the SelectedIndexChanged event of the cmbFilterBuilding control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbFilterBuilding_SelectedIndexChanged(object sender, EventArgs e)
         {
             filterDGrid();
         }
 
+        /// <summary>Handles the SelectedIndexChanged event of the cmbFilterStatus control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbFilterStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             filterDGrid();

@@ -20,6 +20,8 @@ namespace E_Apartments.Forms.Clerk
         }
         AppDbContext _appDbContext;
 
+        /// <summary>Loads the building ids.</summary>
+        /// <param name="location">The location.</param>
         private void loadBuildingIds(string location)
         {
             try
@@ -52,6 +54,7 @@ namespace E_Apartments.Forms.Clerk
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Loads the class ids.</summary>
         private void loadClassIds()
         {
             try
@@ -66,6 +69,7 @@ namespace E_Apartments.Forms.Clerk
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Loads the locations.</summary>
         private void loadLocations()
         {
             try
@@ -81,6 +85,8 @@ namespace E_Apartments.Forms.Clerk
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Calculates the floor number.</summary>
+        /// <param name="buildingId">The building identifier.</param>
         private void calculateFloorNumber(string buildingId)
         {
             try
@@ -102,6 +108,7 @@ namespace E_Apartments.Forms.Clerk
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Views the grid.</summary>
         private void viewGrid()
         {
             try
@@ -117,6 +124,9 @@ namespace E_Apartments.Forms.Clerk
             }
         }
 
+        /// <summary>Handles the Load event of the FrmCheckAvailability control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmCheckAvailability_Load(object sender, EventArgs e)
         {
             loadBuildingIds(null);
@@ -128,6 +138,9 @@ namespace E_Apartments.Forms.Clerk
             lblClassName.Text = string.Empty;
         }
 
+        /// <summary>Handles the Click event of the btnClearFilters control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnClearFilters_Click(object sender, EventArgs e)
         {
             cmbLocation.SelectedIndex = 0;
@@ -137,6 +150,9 @@ namespace E_Apartments.Forms.Clerk
             viewGrid();
         }
 
+        /// <summary>Handles the SelectedIndexChanged event of the cmbLocation control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbLocation_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadBuildingIds(cmbLocation.SelectedValue.ToString());
@@ -151,6 +167,9 @@ namespace E_Apartments.Forms.Clerk
             }
         }
 
+        /// <summary>Handles the SelectedIndexChanged event of the cmbBuildingId control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbBuildingId_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbBuildingId.SelectedIndex != 0)
@@ -164,6 +183,9 @@ namespace E_Apartments.Forms.Clerk
             }
         }
 
+        /// <summary>Handles the SelectedIndexChanged event of the cmbClassId control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbClassId_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbClassId.SelectedIndex != 0)
@@ -176,6 +198,9 @@ namespace E_Apartments.Forms.Clerk
             }
         }
 
+        /// <summary>Handles the Click event of the btnFindApt control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnFindApt_Click(object sender, EventArgs e)
         {
             if (cmbBuildingId.SelectedIndex == 0 && cmbLocation.SelectedIndex == 0 && cmbClassId.SelectedIndex == 0)

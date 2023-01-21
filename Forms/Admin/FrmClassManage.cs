@@ -32,6 +32,9 @@ namespace E_Apartments.Forms.Admin
         }
        
         AppDbContext _appDbContext;
+        /// <summary>Handles the Click event of the btnSearch control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnSearch_Click(object sender, EventArgs e)
         {
             btnStatus(true, false);
@@ -39,12 +42,18 @@ namespace E_Apartments.Forms.Admin
             cmbClassID.SelectedIndex = 0;
         }
 
+        /// <summary>Handles the Click event of the btnClose control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnClose_Click(object sender, EventArgs e)
         {
             btnStatus(false, true);
             Clear();
         }
 
+        /// <summary>BTNs the status.</summary>
+        /// <param name="major">if set to <c>true</c> [major].</param>
+        /// <param name="secd">if set to <c>true</c> [secd].</param>
         private void btnStatus(bool major, bool secd)
         {
             btnClose.Visible = major;
@@ -63,6 +72,7 @@ namespace E_Apartments.Forms.Admin
         {
             Clear();
         }
+        /// <summary>Clears this instance.</summary>
         private void Clear()
         {
             txtClassID.Text = string.Empty;
@@ -79,6 +89,9 @@ namespace E_Apartments.Forms.Admin
             nmbServentRoomsCount.Value = 0;
         }
 
+        /// <summary>Handles the Click event of the btnAdd control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -134,6 +147,9 @@ namespace E_Apartments.Forms.Admin
             
         }
 
+        /// <summary>Handles the Load event of the FrmClassManage control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmClassManage_Load(object sender, EventArgs e)
         {
             txtRefundableAmount.Text = "0.00";
@@ -143,12 +159,16 @@ namespace E_Apartments.Forms.Admin
 
         }
 
+        /// <summary>Handles the Click event of the btnUpdate control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             updateClassDetails();
             cmbClassID.SelectedIndex = 0;
             LoadClassIds();
         }
+        /// <summary>Updates the class details.</summary>
         void updateClassDetails()
         {
             try
@@ -190,12 +210,18 @@ namespace E_Apartments.Forms.Admin
             
         }
 
+        /// <summary>Handles the SelectedIndexChanged event of the cmbClassID control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbClassID_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadClassDetailsToFields(cmbClassID.Text.ToString(),cmbClassID.SelectedIndex);
 
         }
 
+        /// <summary>Loads the class details to fields.</summary>
+        /// <param name="key">The key.</param>
+        /// <param name="selectedIndex">Index of the selected.</param>
         private void LoadClassDetailsToFields(string key, int selectedIndex)
         {
             try
@@ -234,6 +260,7 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Loads the class ids.</summary>
         private void LoadClassIds()
         {
             try
@@ -250,6 +277,9 @@ namespace E_Apartments.Forms.Admin
             
         }
 
+        /// <summary>Handles the Click event of the btnDelete control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
@@ -271,11 +301,17 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the SelectedIndexChanged event of the cmbSearchClassId control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbSearchClassId_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadClassDetailsToFields(cmbSearchClassId.Text.ToString(),cmbSearchClassId.SelectedIndex);
         }
 
+        /// <summary>Handles the TextChanged event of the cmbSearchClassId control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbSearchClassId_TextChanged(object sender, EventArgs e)
         {
             cmbSearchClassId.Items.Clear();

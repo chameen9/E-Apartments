@@ -35,7 +35,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmExtendRequestManage));
             this.DGridReqests = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnExportPdf = new FontAwesome.Sharp.IconButton();
             this.lblNewRfa = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblBalance = new System.Windows.Forms.Label();
@@ -52,6 +51,8 @@
             this.txtLeaseId = new System.Windows.Forms.TextBox();
             this.txtApartmentId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnExportPdf = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.DGridReqests)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -133,26 +134,6 @@
             this.groupBox1.TabIndex = 101;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Extend Request";
-            // 
-            // btnExportPdf
-            // 
-            this.btnExportPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
-            this.btnExportPdf.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExportPdf.FlatAppearance.BorderSize = 0;
-            this.btnExportPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportPdf.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
-            this.btnExportPdf.IconColor = System.Drawing.Color.White;
-            this.btnExportPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExportPdf.IconSize = 25;
-            this.btnExportPdf.Location = new System.Drawing.Point(779, 23);
-            this.btnExportPdf.Name = "btnExportPdf";
-            this.btnExportPdf.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnExportPdf.Size = new System.Drawing.Size(114, 31);
-            this.btnExportPdf.TabIndex = 110;
-            this.btnExportPdf.Text = "Export";
-            this.btnExportPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExportPdf.UseVisualStyleBackColor = false;
-            this.btnExportPdf.Click += new System.EventHandler(this.btnExportPdf_Click);
             // 
             // lblNewRfa
             // 
@@ -296,12 +277,44 @@
             this.label3.TabIndex = 44;
             this.label3.Text = "Apartment ID";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(862, 27);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 25);
+            this.label7.TabIndex = 111;
+            this.label7.Text = "All Leasings";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // btnExportPdf
+            // 
+            this.btnExportPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(251)))));
+            this.btnExportPdf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportPdf.FlatAppearance.BorderSize = 0;
+            this.btnExportPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportPdf.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
+            this.btnExportPdf.IconColor = System.Drawing.Color.White;
+            this.btnExportPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExportPdf.IconSize = 25;
+            this.btnExportPdf.Location = new System.Drawing.Point(779, 23);
+            this.btnExportPdf.Name = "btnExportPdf";
+            this.btnExportPdf.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnExportPdf.Size = new System.Drawing.Size(114, 31);
+            this.btnExportPdf.TabIndex = 110;
+            this.btnExportPdf.Text = "Export";
+            this.btnExportPdf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExportPdf.UseVisualStyleBackColor = false;
+            this.btnExportPdf.Click += new System.EventHandler(this.btnExportPdf_Click);
+            // 
             // FrmExtendRequestManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
             this.ClientSize = new System.Drawing.Size(1030, 655);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.DGridReqests);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -317,6 +330,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -341,5 +355,6 @@
         private System.Windows.Forms.Label lblRfa;
         private System.Windows.Forms.Label label5;
         private FontAwesome.Sharp.IconButton btnExportPdf;
+        private System.Windows.Forms.Label label7;
     }
 }

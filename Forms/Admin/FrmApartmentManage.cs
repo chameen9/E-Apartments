@@ -23,6 +23,7 @@ namespace E_Apartments.Forms.Admin
         }
         AppDbContext _appDbContext;
 
+        /// <summary>Loads the building ids.</summary>
         private void loadBuildingIds()
         {
             try
@@ -38,6 +39,9 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Loads the parking i ds.</summary>
+        /// <param name="FilterWithBuilding">if set to <c>true</c> [filter with building].</param>
+        /// <param name="BuildingId">The building identifier.</param>
         private void loadParkingIDs(bool FilterWithBuilding, string BuildingId)
         {
             try
@@ -61,6 +65,7 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Loads the class ids.</summary>
         private void loadClassIds()
         {
             try
@@ -75,6 +80,8 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Calculates the floor number.</summary>
+        /// <param name="buildingId">The building identifier.</param>
         private void calculateFloorNumber(string buildingId)
         {
             try
@@ -96,6 +103,7 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Views the grid.</summary>
         private void viewGrid()
         {
             try
@@ -110,6 +118,7 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Clears this instance.</summary>
         private void clear()
         {
             txtApartmentId.Text = string.Empty;
@@ -118,6 +127,7 @@ namespace E_Apartments.Forms.Admin
             //cmbParkingId.SelectedIndex = 0;
             cmbClassId.SelectedIndex = 0;
         }
+        /// <summary>Loads the apartment ids.</summary>
         private void loadApartmentIds()
         {
             try
@@ -132,6 +142,9 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Changes the feild status.</summary>
+        /// <param name="Primary">if set to <c>true</c> [primary].</param>
+        /// <param name="Secondary">if set to <c>true</c> [secondary].</param>
         private void changeFeildStatus(bool Primary, bool Secondary)
         {
             btnClose.Visible = Primary;
@@ -146,12 +159,16 @@ namespace E_Apartments.Forms.Admin
             btnAdd.Visible = Secondary;
         }
 
+        /// <summary>BTNs the search event.</summary>
         private void btnSearchEvent()
         {
             changeFeildStatus(true, false);
             loadApartmentIds();
             cmbApartmentID.SelectedIndex = 0;
         }
+        /// <summary>Fetches the data to fields.</summary>
+        /// <param name="key">The key.</param>
+        /// <param name="selectedIndex">Index of the selected.</param>
         private void fetchDataToFields(string key, int selectedIndex)
         {
             try
@@ -182,6 +199,9 @@ namespace E_Apartments.Forms.Admin
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>Handles the Load event of the FrmApartmentManage control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmApartmentManage_Load(object sender, EventArgs e)
         {
             loadBuildingIds();
@@ -204,6 +224,9 @@ namespace E_Apartments.Forms.Admin
             clear();
         }
 
+        /// <summary>Handles the Click event of the btnAdd control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             var existingApartmentId = _appDbContext.Apartments.Where(x=>x.ApartmentId == txtApartmentId.Text).FirstOrDefault();
@@ -270,6 +293,9 @@ namespace E_Apartments.Forms.Admin
             
         }
 
+        /// <summary>Handles the Click event of the btnUpdate control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -308,6 +334,9 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the Click event of the btnDelete control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to delete the selected item?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -350,6 +379,9 @@ namespace E_Apartments.Forms.Admin
             clear();
         }
 
+        /// <summary>Handles the SelectedIndexChanged event of the cmbBuildingId control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbBuildingId_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadParkingIDs(true,cmbBuildingId.SelectedValue.ToString());
@@ -365,6 +397,9 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the SelectedIndexChanged event of the cmbApartmentID control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbApartmentID_SelectedIndexChanged(object sender, EventArgs e)
         {
             fetchDataToFields(cmbApartmentID.Text.ToString(), cmbApartmentID.SelectedIndex);
@@ -380,6 +415,9 @@ namespace E_Apartments.Forms.Admin
 
         }
 
+        /// <summary>Handles the SelectedIndexChanged event of the cmbClassId control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void cmbClassId_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbClassId.SelectedIndex != 0)
@@ -392,6 +430,9 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the TextChanged event of the txtSearchBox control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void txtSearchBox_TextChanged(object sender, EventArgs e)
         {
             string searchText = txtSearchBox.Text;
@@ -414,6 +455,9 @@ namespace E_Apartments.Forms.Admin
             DGridApartments.Refresh();
         }
 
+        /// <summary>Handles the Enter event of the txtSearchBox control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void txtSearchBox_Enter(object sender, EventArgs e)
         {
             if (txtSearchBox.Text == "Enter Building ID or Class ID")
@@ -423,6 +467,9 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the Leave event of the txtSearchBox control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void txtSearchBox_Leave(object sender, EventArgs e)
         {
             if (txtSearchBox.Text == "")

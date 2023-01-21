@@ -17,6 +17,9 @@ namespace E_Apartments.Forms
             InitializeComponent();
         }
 
+        /// <summary>Handles the Tick event of the timer control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void timer_Tick(object sender, EventArgs e)
         {
             timer.Enabled = true;

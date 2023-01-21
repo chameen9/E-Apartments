@@ -19,6 +19,9 @@ namespace E_Apartments.Forms.CusForms
             InitializeComponent();
         }
         AppDbContext _appDbContext;
+        /// <summary>Handles the Load event of the FrmCusApplications control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmCusApplications_Load(object sender, EventArgs e)
         {
             Guid cusId = FrmCusDashboard.cusIdApplication;

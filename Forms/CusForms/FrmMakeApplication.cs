@@ -24,6 +24,9 @@ namespace E_Apartments.Forms.CusForms
         }
         AppDbContext _appDbContext;
 
+        /// <summary>Handles the Load event of the FrmMakeApplication control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmMakeApplication_Load(object sender, EventArgs e)
         {
             lblCusId.Text = FrmCusApartmentManager.CustomerID;
@@ -40,6 +43,9 @@ namespace E_Apartments.Forms.CusForms
             txtEmail.Text = FrmCusApartmentManager.CustomerEmail;
         }
 
+        /// <summary>Handles the Click event of the btnConfirm control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             if(dtpRequireFrom.Value >= DateTime.Today)
@@ -122,6 +128,9 @@ namespace E_Apartments.Forms.CusForms
             }
         }
 
+        /// <summary>Handles the Click event of the btnCancel control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();

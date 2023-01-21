@@ -33,6 +33,7 @@ namespace E_Apartments.Forms.Admin
                 );
         }
         AppDbContext _appDbContext;
+        /// <summary>Clears this instance.</summary>
         private void clear()
         {
             cmbUserType.SelectedIndex = 0;
@@ -43,6 +44,7 @@ namespace E_Apartments.Forms.Admin
             viewGrid();
         }
 
+        /// <summary>Views the grid.</summary>
         private void viewGrid()
         {
             try
@@ -75,6 +77,9 @@ namespace E_Apartments.Forms.Admin
             clear();
         }
 
+        /// <summary>Handles the CellContentClick event of the DGridUsers control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="DataGridViewCellEventArgs" /> instance containing the event data.</param>
         private void DGridUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if(DGridUsers.Rows.Count > 0)
@@ -102,6 +107,10 @@ namespace E_Apartments.Forms.Admin
         public Guid thisUserId;
         public string thisUserPassword;
 
+        /// <summary>Generates the new paswword.</summary>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         private string generateNewPaswword()
         {
             // Create a new instance of the RNGCryptoServiceProvider class
@@ -121,6 +130,9 @@ namespace E_Apartments.Forms.Admin
             
             return randomString;
         }
+        /// <summary>Handles the Click event of the btnAdd control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             thisUserPassword = Encrypt.Encrypting(generateNewPaswword());
@@ -209,6 +221,9 @@ namespace E_Apartments.Forms.Admin
             cancelEvent();
         }
 
+        /// <summary>Handles the Click event of the btnUpdate control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if(!btnAdd.Visible && cmbUserType.SelectedIndex != 0)
@@ -244,6 +259,9 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the Click event of the btnSearch control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (cmbFilterUserType.SelectedIndex != 0)

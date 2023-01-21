@@ -23,6 +23,9 @@ namespace E_Apartments.Forms.Admin
             toolTip.SetToolTip(btnExportPdf, "Click to export the" + Environment.NewLine + "applications data" + Environment.NewLine + "as a PDF file");
         }
         AppDbContext _appDbContext;
+        /// <summary>Handles the Load event of the FrmManageApplications control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmManageApplications_Load(object sender, EventArgs e)
         {
             try
@@ -53,6 +56,9 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the Click event of the btnExportPdf control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnExportPdf_Click(object sender, EventArgs e)
         {
             if (DGridApplications.Rows.Count > 0)
@@ -142,6 +148,9 @@ namespace E_Apartments.Forms.Admin
         public static string thisAppliedFrom;
         public static string thisAppliedTo;
         public static string thisApID;
+        /// <summary>Handles the CellContentClick event of the DGridApplications control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="DataGridViewCellEventArgs" /> instance containing the event data.</param>
         private void DGridApplications_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if(DGridApplications.Rows.Count > 0)

@@ -18,6 +18,9 @@ namespace E_Apartments.Forms.Admin
             InitializeComponent();
         }
         AppDbContext _appDbContext;
+        /// <summary>Handles the Load event of the FrmMarkApplications control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmMarkApplications_Load(object sender, EventArgs e)
         {
             try
@@ -36,11 +39,17 @@ namespace E_Apartments.Forms.Admin
             }
         }
 
+        /// <summary>Handles the Click event of the btnCancel control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>Handles the Click event of the btnAccept control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnAccept_Click(object sender, EventArgs e)
         {
             Guid ExistingcusId = Guid.Parse(FrmManageApplications.thisCustomerId);

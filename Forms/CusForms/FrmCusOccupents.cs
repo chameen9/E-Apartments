@@ -24,6 +24,7 @@ namespace E_Apartments.Forms.CusForms
         AppDbContext _appDbContext;
         public Guid CustomerId;
 
+        /// <summary>Views the grid.</summary>
         private void viewGrid()   
         {
             try
@@ -40,6 +41,9 @@ namespace E_Apartments.Forms.CusForms
         }
 
 
+        /// <summary>Handles the Load event of the FrmCusOccupents control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmCusOccupents_Load(object sender, EventArgs e)
         {
             try
@@ -71,6 +75,9 @@ namespace E_Apartments.Forms.CusForms
             
         }
 
+        /// <summary>Handles the Click event of the btnUpdate control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -159,6 +166,9 @@ namespace E_Apartments.Forms.CusForms
             }
         }
 
+        /// <summary>Handles the Click event of the icoShowPw control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void icoShowPw_Click(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = false;
@@ -166,6 +176,9 @@ namespace E_Apartments.Forms.CusForms
             icoShowPw.Visible = false;
         }
 
+        /// <summary>Handles the Click event of the icoHidePw control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void icoHidePw_Click(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = true;

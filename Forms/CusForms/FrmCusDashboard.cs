@@ -31,6 +31,8 @@ namespace E_Apartments.Forms.Customer
         private extern static void SendMessage(System.IntPtr one, int two, int three, int four);
         // for panel to act as the ribbon
 
+        /// <summary>Changes the button properties.</summary>
+        /// <param name="clickedButton">The clicked button.</param>
         private void ChangeButtonProperties(IconButton clickedButton)
         {
             List<IconButton> allButtons = new List<IconButton> {
@@ -57,6 +59,7 @@ namespace E_Apartments.Forms.Customer
                 }
             }
         }
+        /// <summary>Resets the button properties.</summary>
         private void ResetButtonProperties()
         {
             List<IconButton> allButtons = new List<IconButton> {
@@ -80,6 +83,9 @@ namespace E_Apartments.Forms.Customer
         public static DateTime LeaseEndDate;
         public static Guid CustomerId;
         public static bool enableLeaseExtendBtn;
+        /// <summary>Handles the Load event of the FrmCusDashboard control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmCusDashboard_Load(object sender, EventArgs e)
         {
             _appDbContext = new AppDbContext();
@@ -182,12 +188,18 @@ namespace E_Apartments.Forms.Customer
             frmWaitDashboard.Show();
         }
 
+        /// <summary>Handles the MouseDown event of the pnlRibbon control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="MouseEventArgs" /> instance containing the event data.</param>
         private void pnlRibbon_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(Handle, 0x112, 0xf012, 0);
         }
 
+        /// <summary>Handles the Click event of the picLogo control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void picLogo_Click(object sender, EventArgs e)
         {
             ResetButtonProperties();
@@ -203,6 +215,9 @@ namespace E_Apartments.Forms.Customer
             frmWaitDashboard.Show();
         }
 
+        /// <summary>Handles the Click event of the btnNavFindApartments control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavFindApartments_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavFindApartments);
@@ -218,6 +233,9 @@ namespace E_Apartments.Forms.Customer
             frmFindApartments.Show();
         }
 
+        /// <summary>Handles the Click event of the btnNavExtendLease control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavExtendLease_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavExtendLease);
@@ -234,6 +252,9 @@ namespace E_Apartments.Forms.Customer
             frmExtendLeasing.Show();
         }
 
+        /// <summary>Handles the Click event of the btnLogout control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnLogout_Click(object sender, EventArgs e)
         {
             FrmLogin frmLogin = new FrmLogin();
@@ -241,16 +262,25 @@ namespace E_Apartments.Forms.Customer
             this.Hide();
         }
 
+        /// <summary>Handles the Click event of the btnMinimize control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        /// <summary>Handles the Click event of the btnExit control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>Handles the Click event of the btnCusReservations control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnCusReservations_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnCusReservations);
@@ -268,6 +298,9 @@ namespace E_Apartments.Forms.Customer
 
         }
 
+        /// <summary>Handles the Click event of the btnNavOccupents control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavOccupents_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavOccupents);
@@ -283,6 +316,9 @@ namespace E_Apartments.Forms.Customer
             frmCusOccupents.Show();
         }
 
+        /// <summary>Handles the Click event of the btnNavApplications control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnNavApplications_Click(object sender, EventArgs e)
         {
             ChangeButtonProperties(btnNavApplications);

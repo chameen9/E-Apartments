@@ -23,6 +23,13 @@ namespace E_Apartments.Forms.CusForms
         AppDbContext _appDbContext;
         public static string CustomerEmail;
         public static Guid foundCustomerId;
+        /// <summary>
+        ///   <para>
+        /// Handles the Load event of the FrmCusApartmentManager control.
+        /// </para>
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmCusApartmentManager_Load(object sender, EventArgs e)
         {
             txtSelectedApartment.Text = FrmFindApartments.cellApartmentId.ToString();
@@ -72,6 +79,9 @@ namespace E_Apartments.Forms.CusForms
             foundCustomerId = foundCusID;
         }
 
+        /// <summary>Handles the Click event of the btnCancel control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -84,6 +94,9 @@ namespace E_Apartments.Forms.CusForms
         public static bool AdditionalParkingState;
         public static string ReservationFee;
         public static int AdditionalParkingId;
+        /// <summary>Handles the Click event of the btnConfirm control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             _appDbContext = new AppDbContext();

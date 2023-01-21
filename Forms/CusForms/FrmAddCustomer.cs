@@ -29,21 +29,16 @@ namespace E_Apartments.Forms
             txtDepName.TextChanged += BtnStatusChangeEvent;
             nmbDepAge.ValueChanged += BtnStatusChangeEvent;
             cmbDepRelation.SelectedIndexChanged += BtnStatusChangeEvent;
-
-
-
         }
+        //Global varibles
         AppDbContext _appDbContext;
-        //DBQueries dbQueries = new DBQueries();
 
+        DBQueries dtbq = new DBQueries();
+
+        // Public properties
         public static Guid customerId;
         public static string customerName;
         public string existingNIC;
-
-        //public string checkedDepName;
-        //public string checkedDepRelation;
-        //public string checkedDepAge;
-        //public string checkedDepCusId;
 
         public string customerMailAddress;
 
@@ -75,7 +70,7 @@ namespace E_Apartments.Forms
         {
             EraseCustomerDetails(true);
         }
-        DBQueries dtbq = new DBQueries();
+        
         /// <summary>Handles the Click event of the btnAddCustomer control.</summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
@@ -216,7 +211,7 @@ namespace E_Apartments.Forms
                 ValidationResult Depresults = Depvalidator.Validate(dependent);
                 //validate rule
 
-                if (!Depresults.IsValid)    //if has errors
+                if (!Depresults.IsValid)    //if errors
                 {
                     foreach (var failure in Depresults.Errors)
                     {
@@ -300,6 +295,9 @@ namespace E_Apartments.Forms
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        /// <summary>Gets the occupent count.</summary>
+        /// <param name="Skipped">if set to <c>true</c> [skipped].</param>
         private void GetOccupentCount(bool Skipped)
         {
             if (Skipped)
@@ -312,26 +310,29 @@ namespace E_Apartments.Forms
             }
         }
 
+        /// <summary>Handles the Load event of the FrmAddCustomer control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void FrmAddCustomer_Load(object sender, EventArgs e)
         {
             ShowDatainGridWithoutDetails();
             EraseDependentDetails();
         }
 
+        /// <summary>Handles the Click event of the btnClearDependentDetails control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnClearDependentDetails_Click(object sender, EventArgs e)
         {
             EraseDependentDetails();
         }
 
+        /// <summary>Erases the dependent details.</summary>
         private void EraseDependentDetails()
         {
             txtDepName.Text = String.Empty;
             nmbDepAge.Value = 0;
             cmbDepRelation.SelectedIndex = 0;
-        }
-        private void DependentFeildsStatus(bool ActiveStatus)
-        {
-
         }
 
         /// <summary>Handles the Click event of the btnSkip control.</summary>
@@ -403,6 +404,9 @@ namespace E_Apartments.Forms
             CustomerDataFieldsStatus(true);
         }
 
+        /// <summary>Handles the Click event of the btnExit control.</summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void btnExit_Click(object sender, EventArgs e)
         {
             FrmLogin frmLogin = new FrmLogin();
