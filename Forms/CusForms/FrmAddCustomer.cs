@@ -275,7 +275,7 @@ namespace E_Apartments.Forms
                 ValidationResult Depresults = Depvalidator.Validate(dependent);
                 //validate rule
 
-                if (!Depresults.IsValid)    //if errors
+                if (!Depresults.IsValid)    //if validation fails
                 {
                     foreach (var failure in Depresults.Errors)
                     {
@@ -284,7 +284,7 @@ namespace E_Apartments.Forms
                     }
                 }
 
-                else    // if dont have errors
+                else    // if passed
                 {
                     _appDbContext = new AppDbContext();
                     var existingDependent = _appDbContext.Dependents.Where(x => x.DependentName == txtDepName.Text.ToString())
